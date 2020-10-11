@@ -15,6 +15,8 @@
 		8C464FBF2532C6EE00FCFC2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C464FBD2532C6EE00FCFC2E /* LaunchScreen.storyboard */; };
 		8C464FCA2532C6EE00FCFC2E /* NewARTickTacToeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C464FC92532C6EE00FCFC2E /* NewARTickTacToeAppTests.swift */; };
 		8C464FD52532C6EE00FCFC2E /* NewARTickTacToeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C464FD42532C6EE00FCFC2E /* NewARTickTacToeAppUITests.swift */; };
+		8C464FE62532D7C600FCFC2E /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C464FE52532D7C600FCFC2E /* PlayerModel.swift */; };
+		8C4DFFC12532EFCB00DE09AE /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DFFC02532EFCB00DE09AE /* ButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		8C464FD02532C6EE00FCFC2E /* NewARTickTacToeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewARTickTacToeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C464FD42532C6EE00FCFC2E /* NewARTickTacToeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewARTickTacToeAppUITests.swift; sourceTree = "<group>"; };
 		8C464FD62532C6EE00FCFC2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C464FE52532D7C600FCFC2E /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
+		8C4DFFC02532EFCB00DE09AE /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +103,11 @@
 		8C464FB12532C6ED00FCFC2E /* NewARTickTacToeApp */ = {
 			isa = PBXGroup;
 			children = (
+				8C464FE22532CAFE00FCFC2E /* Model */,
+				8C464FE32532CB1500FCFC2E /* View */,
+				8C464FE42532CB2000FCFC2E /* Controller */,
 				8C464FB22532C6ED00FCFC2E /* AppDelegate.swift */,
 				8C464FB42532C6ED00FCFC2E /* art.scnassets */,
-				8C464FB62532C6ED00FCFC2E /* ViewController.swift */,
 				8C464FB82532C6ED00FCFC2E /* Main.storyboard */,
 				8C464FBB2532C6EE00FCFC2E /* Assets.xcassets */,
 				8C464FBD2532C6EE00FCFC2E /* LaunchScreen.storyboard */,
@@ -126,6 +132,30 @@
 				8C464FD62532C6EE00FCFC2E /* Info.plist */,
 			);
 			path = NewARTickTacToeAppUITests;
+			sourceTree = "<group>";
+		};
+		8C464FE22532CAFE00FCFC2E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8C464FE52532D7C600FCFC2E /* PlayerModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8C464FE32532CB1500FCFC2E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8C4DFFC02532EFCB00DE09AE /* ButtonView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8C464FE42532CB2000FCFC2E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8C464FB62532C6ED00FCFC2E /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +290,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C464FE62532D7C600FCFC2E /* PlayerModel.swift in Sources */,
 				8C464FB72532C6ED00FCFC2E /* ViewController.swift in Sources */,
+				8C4DFFC12532EFCB00DE09AE /* ButtonView.swift in Sources */,
 				8C464FB32532C6ED00FCFC2E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
