@@ -22,6 +22,9 @@
 		8C4DFFC7253543DA00DE09AE /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DFFC6253543DA00DE09AE /* LabelView.swift */; };
 		8C4DFFC92535467C00DE09AE /* MakeFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DFFC82535467C00DE09AE /* MakeFieldModel.swift */; };
 		8C4DFFCB253546F300DE09AE /* SetARModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DFFCA253546F300DE09AE /* SetARModel.swift */; };
+		8C4DFFCD2535585700DE09AE /* SaveColoerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DFFCC2535585700DE09AE /* SaveColoerModel.swift */; };
+		8C4DFFCF25355C2200DE09AE /* JudgementWinerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DFFCE25355C2200DE09AE /* JudgementWinerModel.swift */; };
+		8C4DFFD12535609800DE09AE /* MakePawnModle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DFFD02535609800DE09AE /* MakePawnModle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		8C4DFFC6253543DA00DE09AE /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
 		8C4DFFC82535467C00DE09AE /* MakeFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeFieldModel.swift; sourceTree = "<group>"; };
 		8C4DFFCA253546F300DE09AE /* SetARModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetARModel.swift; sourceTree = "<group>"; };
+		8C4DFFCC2535585700DE09AE /* SaveColoerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveColoerModel.swift; sourceTree = "<group>"; };
+		8C4DFFCE25355C2200DE09AE /* JudgementWinerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JudgementWinerModel.swift; sourceTree = "<group>"; };
+		8C4DFFD02535609800DE09AE /* MakePawnModle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakePawnModle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +158,9 @@
 				8C4DFFC4253542BC00DE09AE /* SetButtonModel.swift */,
 				8C4DFFC82535467C00DE09AE /* MakeFieldModel.swift */,
 				8C4DFFCA253546F300DE09AE /* SetARModel.swift */,
+				8C4DFFCC2535585700DE09AE /* SaveColoerModel.swift */,
+				8C4DFFCE25355C2200DE09AE /* JudgementWinerModel.swift */,
+				8C4DFFD02535609800DE09AE /* MakePawnModle.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -309,11 +318,14 @@
 				8C464FB72532C6ED00FCFC2E /* ViewController.swift in Sources */,
 				8C4DFFC92535467C00DE09AE /* MakeFieldModel.swift in Sources */,
 				8C4DFFCB253546F300DE09AE /* SetARModel.swift in Sources */,
+				8C4DFFCD2535585700DE09AE /* SaveColoerModel.swift in Sources */,
 				8C4DFFC7253543DA00DE09AE /* LabelView.swift in Sources */,
 				8C4DFFC5253542BC00DE09AE /* SetButtonModel.swift in Sources */,
 				8C4DFFC3253540DE00DE09AE /* GetScreenSizeModel.swift in Sources */,
+				8C4DFFCF25355C2200DE09AE /* JudgementWinerModel.swift in Sources */,
 				8C4DFFC12532EFCB00DE09AE /* ButtonView.swift in Sources */,
 				8C464FB32532C6ED00FCFC2E /* AppDelegate.swift in Sources */,
+				8C4DFFD12535609800DE09AE /* MakePawnModle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
