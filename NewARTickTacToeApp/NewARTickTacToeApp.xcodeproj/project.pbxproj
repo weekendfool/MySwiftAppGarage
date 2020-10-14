@@ -26,6 +26,7 @@
 		8C4DFFCF25355C2200DE09AE /* JudgementWinerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DFFCE25355C2200DE09AE /* JudgementWinerModel.swift */; };
 		8C4DFFD12535609800DE09AE /* MakePawnModle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DFFD02535609800DE09AE /* MakePawnModle.swift */; };
 		8C4DFFD3253739D000DE09AE /* DeleteARModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DFFD2253739D000DE09AE /* DeleteARModel.swift */; };
+		8C4DFFD52537496D00DE09AE /* ChangeButtonColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DFFD42537496D00DE09AE /* ChangeButtonColorModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		8C4DFFCE25355C2200DE09AE /* JudgementWinerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JudgementWinerModel.swift; sourceTree = "<group>"; };
 		8C4DFFD02535609800DE09AE /* MakePawnModle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakePawnModle.swift; sourceTree = "<group>"; };
 		8C4DFFD2253739D000DE09AE /* DeleteARModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteARModel.swift; sourceTree = "<group>"; };
+		8C4DFFD42537496D00DE09AE /* ChangeButtonColorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeButtonColorModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 				8C4DFFCE25355C2200DE09AE /* JudgementWinerModel.swift */,
 				8C4DFFD02535609800DE09AE /* MakePawnModle.swift */,
 				8C4DFFD2253739D000DE09AE /* DeleteARModel.swift */,
+				8C4DFFD42537496D00DE09AE /* ChangeButtonColorModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				8C4DFFC7253543DA00DE09AE /* LabelView.swift in Sources */,
 				8C4DFFC5253542BC00DE09AE /* SetButtonModel.swift in Sources */,
 				8C4DFFC3253540DE00DE09AE /* GetScreenSizeModel.swift in Sources */,
+				8C4DFFD52537496D00DE09AE /* ChangeButtonColorModel.swift in Sources */,
 				8C4DFFCF25355C2200DE09AE /* JudgementWinerModel.swift in Sources */,
 				8C4DFFC12532EFCB00DE09AE /* ButtonView.swift in Sources */,
 				8C464FB32532C6ED00FCFC2E /* AppDelegate.swift in Sources */,
