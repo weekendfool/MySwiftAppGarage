@@ -11,6 +11,8 @@ import UIKit
 
 class MainLabel {
     
+    @IBOutlet weak var mainLabel: UILabel!
+    
     // ラベル生成
     func MakeLabel(screenWidth:CGFloat, screenHeight:CGFloat, targetView:UIView, targetLabelInstance:UILabel) {
         // ラベルの位置決定

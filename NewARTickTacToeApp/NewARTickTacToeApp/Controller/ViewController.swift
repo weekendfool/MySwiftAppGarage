@@ -14,6 +14,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,38 +23,38 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     // MARK: - ボタン押した時の処理
-    @IBAction func numberOneButtonAction(_ sender: Any) {
+    @IBAction func oneButtonAction(_ sender: Any) {
         
     }
     
-    @IBAction func numberTewButtonAction(_ sender: Any) {
+    @IBAction func tewButtonAction(_ sender: Any) {
         
     }
     
-    @IBAction func numberThreeButtonAction(_ sender: Any) {
+    @IBAction func threeButtonAction(_ sender: Any) {
         
     }
     
-    @IBAction func numberFourButtonAction(_ sender: Any) {
+    @IBAction func fourButtonAction(_ sender: Any) {
         
     }
     
-    @IBAction func numberFiveButtonAction(_ sender: Any) {
+    @IBAction func fiveButtonAction(_ sender: Any) {
        
     }
     
-    @IBAction func numberSixButtonAction(_ sender: Any) {
+    @IBAction func sixButtonAction(_ sender: Any) {
        
     }
     
-    @IBAction func numberSevenButtonAction(_ sender: Any) {
+    @IBAction func sevenButtonAction(_ sender: Any) {
         
     }
-    @IBAction func numberEightButtonAction(_ sender: Any) {
+    @IBAction func eightButtonAction(_ sender: Any) {
         
     }
     
-    @IBAction func numberNineButtonAction(_ sender: Any) {
+    @IBAction func nineButtonAction(_ sender: Any) {
         
     }
     

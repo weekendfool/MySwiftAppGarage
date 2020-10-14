@@ -12,9 +12,6 @@ import SceneKit
 
 class Pawn {
     
-    func makePawnNode() {
-        
-    }
     
     // ポーンを生成する処理
     func makePawn(player: Int, fieldNumber: Int, fieldPoint: SCNVector3) {

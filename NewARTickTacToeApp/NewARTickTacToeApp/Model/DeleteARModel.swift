@@ -7,18 +7,15 @@
 //
 
 import Foundation
+import ARKit
+import SceneKit
 
 class DeleteAR {
     
     func deleteAR(fieldNode: SCNNode, pawnNode: SCNNode) {
         // ノードの削除
-        if let field = fieldNode {
-            field.removeFromParentNode()
-        }
-        if let pawn = pawnNode {
-            pawn.removeFromParentNode()
-        }
-        print("OK")
+        fieldNode.removeFromParentNode()
+        pawnNode.removeFromParentNode()
     }
     
 }
