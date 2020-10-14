@@ -11,7 +11,7 @@ import UIKit
 import SceneKit
 import ARKit
 
-class ARSetting {
+class SettingAR {
     
 //    @IBOutlet var sceneView: ARSCNView!
     

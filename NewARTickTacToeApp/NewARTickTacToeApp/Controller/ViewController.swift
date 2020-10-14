@@ -14,12 +14,32 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
     
+    var count = 0
     
+    // 各インスタンスの設定
+    // modelのインスタンス
+    let player = Player()
+    let getScreenSize = GetScreenSize()
+    let saveColor = SaveColor()
+    let setButton = SetButton()
+    let makeField = MakeField()
+    let settingAR = SettingAR()
+    let judgmentWiner = JudgmentWiner()
+    let pawn = Pawn()
+    let deleteAR = DeleteAR()
+    // viewのインスタンス
+    let makeButton = MakeButton()
+    let mainLabel = MainLabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
+    }
+    
+    func setUp() {
+        // スクリーンサイズの取得
+        let myScreenSize = getScreenSize.setScreenSize()
     }
     
     // MARK: - ボタン押した時の処理
