@@ -11,8 +11,13 @@ import UIKit
 import SceneKit
 
 class Pawn {
+    
+    func makePawnNode() {
+        
+    }
+    
     // ポーンを生成する処理
-    func makePawn(player: Int, fieldNumber: Int) {
+    func makePawn(player: Int, fieldNumber: Int, fieldPoint: SCNVector3) {
                 
 //        // pawanの場所を格納する変数
 //        var pawnPoint:SCNVector3?
@@ -21,7 +26,9 @@ class Pawn {
         var newStagePintZ:Float?
         var newStagePintY:Float?
     
-    
+        // pawanの色を格納する変数
+        var pawnNode:SCNNode?
+        
         // playerにより赤か青か場合わけ
         if player == 1 {
             // scnファイルからシーンを読み込む
@@ -39,7 +46,7 @@ class Pawn {
         // 選択された場所により生成する場所の座標を変える
         switch fieldNumber {
         case 1:
-            newStagePintX = fieldPoint!.x - 0.098; newStagePintY = fieldPoint!.y + 0.081; newStagePintZ = fieldPoint!.z - 0.096
+            newStagePintX = fieldPoint.x - 0.098; newStagePintY = fieldPoint.y + 0.081; newStagePintZ = fieldPoint.z - 0.096
         case 2:
             newStagePintX = fieldPoint!.x + 0.000; newStagePintY = fieldPoint!.y + 0.081; newStagePintZ = fieldPoint!.z - 0.096
         case 3:
