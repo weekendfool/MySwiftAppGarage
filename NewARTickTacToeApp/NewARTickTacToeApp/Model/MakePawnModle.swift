@@ -43,26 +43,27 @@ class Pawn {
             let blueNode = (scene?.rootNode.childNode(withName: "bluePawn", recursively: false))!
             pawnNode = blueNode
         }
+        
         // 選択された場所により生成する場所の座標を変える
         switch fieldNumber {
         case 1:
             newStagePintX = fieldPoint.x - 0.098; newStagePintY = fieldPoint.y + 0.081; newStagePintZ = fieldPoint.z - 0.096
         case 2:
-            newStagePintX = fieldPoint!.x + 0.000; newStagePintY = fieldPoint!.y + 0.081; newStagePintZ = fieldPoint!.z - 0.096
+            newStagePintX = fieldPoint.x + 0.000; newStagePintY = fieldPoint.y + 0.081; newStagePintZ = fieldPoint.z - 0.096
         case 3:
-            newStagePintX = fieldPoint!.x + 0.098; newStagePintY = fieldPoint!.y + 0.081; newStagePintZ = fieldPoint!.z - 0.096
+            newStagePintX = fieldPoint.x + 0.098; newStagePintY = fieldPoint.y + 0.081; newStagePintZ = fieldPoint.z - 0.096
         case 4:
-            newStagePintX = fieldPoint!.x - 0.098; newStagePintY = fieldPoint!.y + 0.081; newStagePintZ = fieldPoint!.z + 0.000
+            newStagePintX = fieldPoint.x - 0.098; newStagePintY = fieldPoint.y + 0.081; newStagePintZ = fieldPoint.z + 0.000
         case 5:
-            newStagePintX = fieldPoint!.x + 0.000; newStagePintY = fieldPoint!.y + 0.081; newStagePintZ = fieldPoint!.z + 0.000
+            newStagePintX = fieldPoint.x + 0.000; newStagePintY = fieldPoint.y + 0.081; newStagePintZ = fieldPoint.z + 0.000
         case 6:
-            newStagePintX = fieldPoint!.x + 0.098; newStagePintY = fieldPoint!.y + 0.081; newStagePintZ = fieldPoint!.z + 0.000
+            newStagePintX = fieldPoint.x + 0.098; newStagePintY = fieldPoint.y + 0.081; newStagePintZ = fieldPoint.z + 0.000
         case 7:
-            newStagePintX = fieldPoint!.x - 0.098; newStagePintY = fieldPoint!.y + 0.081; newStagePintZ = fieldPoint!.z + 0.096
+            newStagePintX = fieldPoint.x - 0.098; newStagePintY = fieldPoint.y + 0.081; newStagePintZ = fieldPoint.z + 0.096
         case 8:
-            newStagePintX = fieldPoint!.x + 0.000; newStagePintY = fieldPoint!.y + 0.081; newStagePintZ = fieldPoint!.z + 0.096
+            newStagePintX = fieldPoint.x + 0.000; newStagePintY = fieldPoint.y + 0.081; newStagePintZ = fieldPoint.z + 0.096
         case 9:
-            newStagePintX = fieldPoint!.x + 0.098; newStagePintY = fieldPoint!.y + 0.081; newStagePintZ = fieldPoint!.z + 0.096
+            newStagePintX = fieldPoint.x + 0.098; newStagePintY = fieldPoint.y + 0.081; newStagePintZ = fieldPoint.z + 0.096
         default:
             return
         }
