@@ -14,30 +14,30 @@ class MainLabel {
     @IBOutlet weak var mainLabel: UILabel!
     
     // ラベル生成
-    func MakeLabel(screenWidth:CGFloat, screenHeight:CGFloat, targetView:UIView, targetLabelInstance:UILabel) {
+    func makeLabel(screenWidth:CGFloat, screenHeight:CGFloat, targetView:UIView) {
         // ラベルの位置決定
-        targetLabelInstance.frame = CGRect(x:0, y: 0, width: screenWidth, height: screenHeight / 12)
+        mainLabel.frame = CGRect(x:0, y: 0, width: screenWidth, height: screenHeight / 12)
         // ラベルの色決定
-        targetLabelInstance.textColor = UIColor.gray
-        targetLabelInstance.backgroundColor = UIColor.black
+        mainLabel.textColor = UIColor.gray
+        mainLabel.backgroundColor = UIColor.black
         // ラベルの文字サイズを設定
-        targetLabelInstance.font = UIFont.systemFont(ofSize: 30)
+        mainLabel.font = UIFont.systemFont(ofSize: 30)
         // ラベルの位置決定
-        targetLabelInstance.textAlignment = NSTextAlignment.center
+        mainLabel.textAlignment = NSTextAlignment.center
         // viewに追加
-        targetView.addSubview(targetLabelInstance)
+        targetView.addSubview(mainLabel)
     }
     
     // ラベルの初期化処理
-    func setFirstString(targetLabelInstance:UILabel) {
+    func setFirstString() {
         // ラベルの初期化
-        targetLabelInstance.text = ""
+        mainLabel.text = "ARTickTacToe"
     }
     
     // ラベルの表示処理
-    func changeLabelString(messageString:String, targetLabelInstance:UILabel) {
+    func changeLabelString(messageString:String) {
         // ラベルの表示処理
-        targetLabelInstance.text = messageString
+        mainLabel.text = messageString
     }
     
 }

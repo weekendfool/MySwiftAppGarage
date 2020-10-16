@@ -11,6 +11,7 @@ import UIKit
 
 // スクリーンサイズの取得と返却
 class GetScreenSize {
+    
     // スクリーンサイズの取得
     func setScreenSize() -> (CGFloat, CGFloat){
         let screenWidth = UIScreen.main.bounds.size.width

@@ -17,12 +17,12 @@ class SetButton {
     func buttonModeChange(gameStartFlag: Bool, buttonArray:[UIButton]) {
         if gameStartFlag {
             // 数字ボタンの無効化処理
-            for buttonName in buttonArray{
+            for buttonName in buttonArray {
                 buttonName.isEnabled = false
             }
         } else {
             // 数字ボタンの有効化処理
-            for buttonName in buttonArray{
+            for buttonName in buttonArray {
                 buttonName.isEnabled = true
             }
         }

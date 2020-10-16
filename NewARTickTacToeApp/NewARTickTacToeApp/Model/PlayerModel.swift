@@ -11,21 +11,22 @@ import Foundation
 //　プレイヤーを確定する変数
 class Player {
     
-    func player(count: Int) -> String {
+    func player(count: Int) -> (String, Int) {
         //　返り値を格納する変数
-        var player = ""
+        var playerName = ""
+        var playerColoer = 0
         // countの奇数偶数で場合分けする
         if count % 2 == 1{
-            player = "1P"
+            playerName = "1P"
+            playerColoer = 1
         } else {
-            player = "2P"
+            playerName = "2P"
+            playerColoer = 2
         }
-        
-        if player == "" {
-            return "Player Set Error"
-        } else {
-            return player
-        }
+
+            return (playerName, playerColoer)
     }
+    
+    
     
 }

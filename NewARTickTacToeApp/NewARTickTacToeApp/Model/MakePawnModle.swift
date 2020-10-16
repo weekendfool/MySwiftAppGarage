@@ -14,7 +14,7 @@ class Pawn {
     
     
     // ポーンを生成する処理
-    func makePawn(player: Int, fieldNumber: Int, fieldPoint: SCNVector3) {
+    func makePawn(playerColor: Int, fieldNumber: Int, fieldPoint: SCNVector3) {
                 
 //        // pawanの場所を格納する変数
 //        var pawnPoint:SCNVector3?
@@ -27,13 +27,13 @@ class Pawn {
         var pawnNode:SCNNode?
         
         // playerにより赤か青か場合わけ
-        if player == 1 {
+        if playerColor == 1 {
             // scnファイルからシーンを読み込む
             let scene = SCNScene(named: "art.scnassets/redPawn.scn")
             // シーンからノードを検索
             let redNode = (scene?.rootNode.childNode(withName: "redPawn", recursively: false))!
             pawnNode = redNode
-        } else if player == 2 {
+        } else if playerColor == 2 {
             // scnファイルからシーンを読み込む
             let scene = SCNScene(named: "art.scnassets/bluePawn.scn")
             // シーンからノードを検索

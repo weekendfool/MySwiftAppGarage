@@ -158,7 +158,7 @@ class MakeButton {
         }
     }
     
-    // リセットボタンが押された時の書道
+    // リセットボタンが押された時の挙動
     func resetButton(buttonArray:[UIButton]) {
         //for文で全てのボタンの色の初期化する
         for buttanName in buttonArray {
