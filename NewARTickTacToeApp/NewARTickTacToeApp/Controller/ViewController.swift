@@ -49,8 +49,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setUp()
         
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setUp()
     }
     
     // 初期設定

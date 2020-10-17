@@ -12,17 +12,17 @@ import UIKit
 
 class MakeButton {
     
-    @IBOutlet weak var oneButton: UIButton!
-    @IBOutlet weak var tewButton: UIButton!
-    @IBOutlet weak var threeButton: UIButton!
-    @IBOutlet weak var fourButton: UIButton!
-    @IBOutlet weak var fiveButton: UIButton!
-    @IBOutlet weak var sixButton: UIButton!
-    @IBOutlet weak var sevenButton: UIButton!
-    @IBOutlet weak var eightButton: UIButton!
-    @IBOutlet weak var nineButton: UIButton!
-    @IBOutlet weak var startButton: UIButton!
-    @IBOutlet weak var resetButton: UIButton!
+    var oneButton = UIButton()
+    var tewButton = UIButton()
+    var threeButton = UIButton()
+    var fourButton = UIButton()
+    var fiveButton = UIButton()
+    var sixButton = UIButton()
+    var sevenButton = UIButton()
+    var eightButton = UIButton()
+    var nineButton = UIButton()
+    var startButton = UIButton()
+    var resetButton = UIButton()
     
     
     func setNumverButtonArray() -> [UIButton] {
