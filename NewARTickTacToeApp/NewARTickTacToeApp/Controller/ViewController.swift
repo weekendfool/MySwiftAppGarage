@@ -14,7 +14,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
     
-    
+    var array: [UIButton]?
     var count = 0
     var fieldPoint: SCNVector3?
     var gameFlag = 0 {
@@ -83,7 +83,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     // buttonアクションの設定
     func buttonAction(placeNumber: Int) {
-        
+        // viewの格納
+        let mainView = view
         // プレイヤーの判定
         let playerInfo = player.player(count: count)
         let playerName = playerInfo.0
@@ -92,13 +93,16 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // buttonの色変え
         // ボタン用の配列作成
         let namberButtonArray = makeButton.setNumverButtonArray()
-        makeButton.changeCoulerButton(buttonNumber: placeNumber, player: playerColor, buttonArray: namberButtonArray)
+            makeButton.changeCoulerButton(buttonNumber: placeNumber, player: playerColor, buttonArray: namberButtonArray, targetView: mainView!)
+        
+        
         
         // pawnの表示
         if let fieldPoint = fieldPoint {
             pawn.makePawn(playerColor: playerColor, fieldNumber: placeNumber, fieldPoint: fieldPoint, targetSceneView: sceneView)
         }
         
+        // 画面の再描画
         
         //色の保存
         let colorDic = saveColor.saveColor(InputColor: playerColor, placeNumber: placeNumber)
@@ -118,6 +122,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     // MARK: - ボタン押した時の処理
     @IBAction func oneButtonAction(_ sender: Any) {
         buttonAction(placeNumber: 1)
+//        self.view.updateConstraints()
+//        self.view.updateConstraintsIfNeeded()
+        makeButton.tewButton.backgroundColor = UIColor.red
+        makeButton.tewButton.isEnabled = true
+        self.view.setNeedsLayout()
+        self.view.layoutIfNeeded()
     }
     
     @IBAction func tewButtonAction(_ sender: Any) {
@@ -155,6 +165,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         print(count)
         // フィールドの設定をする
         fieldPoint = makeField.makeField(targetSceneView: sceneView)
+        
+        array = makeButton.setNumverButtonArray()
+        print(array)
         count += 1
         // 次のplayerの表示
         let nextPlayer = player.player(count: count)
