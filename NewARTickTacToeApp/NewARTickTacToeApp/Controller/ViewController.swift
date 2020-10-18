@@ -69,7 +69,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let namberButtonArray = makeButton.setNumverButtonArray()
         let gameButtonArray = makeButton.setGameButtonArray()
         // ボタンの描画
+        // 数字ボタンの追加
         makeButton.makeButton(screenWidth: myScreenSize.0, screenHeight: myScreenSize.1, buttonArray: namberButtonArray, targetView: mainView!)
+        // スタートボタンの追加
+        makeButton.makeButton(screenWidth: myScreenSize.0, screenHeight: myScreenSize.1, buttonArray: gameButtonArray, targetView: mainView!)
         
         // ラベルの作成
         mainLabel.makeLabel(screenWidth: myScreenSize.0, screenHeight: myScreenSize.1, targetView: mainView!)
