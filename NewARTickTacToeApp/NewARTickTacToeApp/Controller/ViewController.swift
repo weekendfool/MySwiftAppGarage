@@ -122,12 +122,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     // MARK: - ボタン押した時の処理
     @IBAction func oneButtonAction(_ sender: Any) {
         buttonAction(placeNumber: 1)
-//        self.view.updateConstraints()
-//        self.view.updateConstraintsIfNeeded()
-        makeButton.tewButton.backgroundColor = UIColor.red
-        makeButton.tewButton.isEnabled = true
-        self.view.setNeedsLayout()
-        self.view.layoutIfNeeded()
+        
     }
     
     @IBAction func tewButtonAction(_ sender: Any) {

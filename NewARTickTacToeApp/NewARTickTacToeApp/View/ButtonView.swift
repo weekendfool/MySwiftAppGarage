@@ -71,64 +71,64 @@ class MakeButton {
                 let buttonSizeWidth = screenWidth / 3.0 // 幅
                 let buttonSizeHight = screenHeight / 12.0 // 高さ
                 // buttonのインスタンス作成
-                let numberButton = UIButton()
+//                let numberButton = UIButton()
                 // スイッチ文で条件分岐
                 switch buttonName {
                 case oneButton:
                     buttonLabel = "1";
                     buttonPointX = buttonSizeWidth * 0
                     buttonPointY = buttonSizeHight * 10
-                    numberButton.addTarget(ViewController(), action: #selector(ViewController().oneButtonAction), for: .touchUpInside)
+                    buttonName.addTarget(ViewController(), action: #selector(ViewController().oneButtonAction), for: .touchUpInside)
                 case tewButton:
                     buttonLabel = "2"
                     buttonPointX = buttonSizeWidth * 1
                     buttonPointY = buttonSizeHight * 10
-                    numberButton.addTarget(ViewController(), action: #selector(ViewController().tewButtonAction), for: .touchUpInside)
+                    buttonName.addTarget(ViewController(), action: #selector(ViewController().tewButtonAction), for: .touchUpInside)
                 case threeButton:
                     buttonLabel = "3"
                     buttonPointX = buttonSizeWidth * 2
                     buttonPointY = buttonSizeHight * 10
-                    numberButton.addTarget(ViewController(), action: #selector(ViewController().threeButtonAction), for: .touchUpInside)
+                    buttonName.addTarget(ViewController(), action: #selector(ViewController().threeButtonAction), for: .touchUpInside)
                 case fourButton:
                     buttonLabel = "4"
                     buttonPointX = buttonSizeWidth * 0
                     buttonPointY = buttonSizeHight * 9
-                    numberButton.addTarget(ViewController(), action: #selector(ViewController().fourButtonAction), for: .touchUpInside)
+                    buttonName.addTarget(ViewController(), action: #selector(ViewController().fourButtonAction), for: .touchUpInside)
                 case fiveButton:
                     buttonLabel = "5"
                     buttonPointX = buttonSizeWidth * 1
                     buttonPointY = buttonSizeHight * 9
-                    numberButton.addTarget(ViewController(), action: #selector(ViewController().fiveButtonAction), for: .touchUpInside)
+                    buttonName.addTarget(ViewController(), action: #selector(ViewController().fiveButtonAction), for: .touchUpInside)
                 case sixButton:
                     buttonLabel = "6"
                     buttonPointX = buttonSizeWidth * 2
                     buttonPointY = buttonSizeHight * 9
-                    numberButton.addTarget(ViewController(), action: #selector(ViewController().sixButtonAction), for: .touchUpInside)
+                    buttonName.addTarget(ViewController(), action: #selector(ViewController().sixButtonAction), for: .touchUpInside)
                 case sevenButton:
                     buttonLabel = "7"
                     buttonPointX = buttonSizeWidth * 0
                     buttonPointY = buttonSizeHight * 8
-                    numberButton.addTarget(ViewController(), action: #selector(ViewController().sevenButtonAction), for: .touchUpInside)
+                    buttonName.addTarget(ViewController(), action: #selector(ViewController().sevenButtonAction), for: .touchUpInside)
                 case eightButton:
                     buttonLabel = "8"
                     buttonPointX = buttonSizeWidth * 1
                     buttonPointY = buttonSizeHight * 8
-                    numberButton.addTarget(ViewController(), action: #selector(ViewController().eightButtonAction), for: .touchUpInside)
+                    buttonName.addTarget(ViewController(), action: #selector(ViewController().eightButtonAction), for: .touchUpInside)
                 case nineButton:
                     buttonLabel = "9"
                     buttonPointX = buttonSizeWidth * 2
                     buttonPointY = buttonSizeHight * 8
-                    numberButton.addTarget(ViewController(), action: #selector(ViewController().nineButtonAction), for: .touchUpInside)
+                    buttonName.addTarget(ViewController(), action: #selector(ViewController().nineButtonAction), for: .touchUpInside)
                 case startButton:
                     buttonLabel = "Start"
                     buttonPointX = buttonSizeWidth * 0
                     buttonPointY = buttonSizeHight * 11
-                    numberButton.addTarget(ViewController(), action: #selector(ViewController().startButtonAction), for: .touchUpInside)
+                    buttonName.addTarget(ViewController(), action: #selector(ViewController().startButtonAction), for: .touchUpInside)
                 case resetButton:
                     buttonLabel = "Reset"
                     buttonPointX = buttonSizeWidth * 3 / 2
                     buttonPointY = buttonSizeHight * 11
-                    numberButton.addTarget(ViewController(), action: #selector(ViewController().resetButtonAction), for: .touchUpInside)
+                    buttonName.addTarget(ViewController(), action: #selector(ViewController().resetButtonAction), for: .touchUpInside)
                 default:
                     print("NumberButton Make Errror")
                     return
@@ -136,30 +136,32 @@ class MakeButton {
                 
                 // buttonのラベル作成
                 if let buttonLabel = buttonLabel {
-                    numberButton.setTitle("\(buttonLabel)", for: UIControl.State.normal)
+                    buttonName.setTitle("\(buttonLabel)", for: UIControl.State.normal)
                     
                     // buttonのサイズを設定
                     if buttonLabel == "Start" || buttonLabel == "Reset" { // Start, Resetボタンのサイズ
-                        numberButton.frame = CGRect(x: buttonPointX!, y: buttonPointY!, width: buttonSizeWidth * 3 / 2, height:buttonSizeHight)
+                        buttonName.frame = CGRect(x: buttonPointX!, y: buttonPointY!, width: buttonSizeWidth * 3 / 2, height:buttonSizeHight)
                     //                print("Button 0 & 00")
                     } else { // 番号ボタンのサイズ
-                        numberButton.frame = CGRect(x: buttonPointX!, y: buttonPointY!, width: buttonSizeWidth, height:buttonSizeHight)
+                        buttonName.frame = CGRect(x: buttonPointX!, y: buttonPointY!, width: buttonSizeWidth, height:buttonSizeHight)
                                 }
                 }
                 
                 
                 // buttonのフォントサイズを設定
-                numberButton.titleLabel?.font = UIFont.systemFont(ofSize: 28)
+                buttonName.titleLabel?.font = UIFont.systemFont(ofSize: 28)
                 
                 
                 
                 // ボタンの枠線を設定
-                numberButton.layer.borderColor = UIColor.darkGray.cgColor
-                numberButton.layer.borderWidth = 2.0
-                numberButton.layer.cornerRadius = 10
+                buttonName.layer.borderColor = UIColor.darkGray.cgColor
+                buttonName.layer.borderWidth = 2.0
+                buttonName.layer.cornerRadius = 10
                 
+                print("##########################")
+                print("numberButton:\(buttonName)")
                 // viewにボタンを追加
-                targetView.addSubview(numberButton)
+                targetView.addSubview(buttonName)
             }
         }
     
@@ -179,7 +181,7 @@ class MakeButton {
             //二回以上選択できなくする処理
             buttonName.isEnabled = false
         
-        targetView.addSubview(buttonName)
+//        targetView.addSubview(buttonName)
         
     }
     
