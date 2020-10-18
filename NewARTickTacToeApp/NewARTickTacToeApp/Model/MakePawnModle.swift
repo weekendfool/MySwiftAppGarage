@@ -9,12 +9,13 @@
 import Foundation
 import UIKit
 import SceneKit
+import ARKit
 
 class Pawn {
     
     
     // ポーンを生成する処理
-    func makePawn(playerColor: Int, fieldNumber: Int, fieldPoint: SCNVector3) {
+    func makePawn(playerColor: Int, fieldNumber: Int, fieldPoint: SCNVector3, targetSceneView: ARSCNView) {
                 
 //        // pawanの場所を格納する変数
 //        var pawnPoint:SCNVector3?
@@ -44,11 +45,11 @@ class Pawn {
         // 選択された場所により生成する場所の座標を変える
         switch fieldNumber {
         case 1:
-            newStagePintX = fieldPoint.x - 0.098; newStagePintY = fieldPoint.y + 0.081; newStagePintZ = fieldPoint.z - 0.096
+            newStagePintX = fieldPoint.x - 0.098; newStagePintY = fieldPoint.y + 0.081; newStagePintZ = fieldPoint.z + 0.096
         case 2:
-            newStagePintX = fieldPoint.x + 0.000; newStagePintY = fieldPoint.y + 0.081; newStagePintZ = fieldPoint.z - 0.096
+            newStagePintX = fieldPoint.x + 0.000; newStagePintY = fieldPoint.y + 0.081; newStagePintZ = fieldPoint.z + 0.096
         case 3:
-            newStagePintX = fieldPoint.x + 0.098; newStagePintY = fieldPoint.y + 0.081; newStagePintZ = fieldPoint.z - 0.096
+            newStagePintX = fieldPoint.x + 0.098; newStagePintY = fieldPoint.y + 0.081; newStagePintZ = fieldPoint.z + 0.096
         case 4:
             newStagePintX = fieldPoint.x - 0.098; newStagePintY = fieldPoint.y + 0.081; newStagePintZ = fieldPoint.z + 0.000
         case 5:
@@ -56,14 +57,27 @@ class Pawn {
         case 6:
             newStagePintX = fieldPoint.x + 0.098; newStagePintY = fieldPoint.y + 0.081; newStagePintZ = fieldPoint.z + 0.000
         case 7:
-            newStagePintX = fieldPoint.x - 0.098; newStagePintY = fieldPoint.y + 0.081; newStagePintZ = fieldPoint.z + 0.096
+            newStagePintX = fieldPoint.x - 0.098; newStagePintY = fieldPoint.y + 0.081; newStagePintZ = fieldPoint.z - 0.096
         case 8:
-            newStagePintX = fieldPoint.x + 0.000; newStagePintY = fieldPoint.y + 0.081; newStagePintZ = fieldPoint.z + 0.096
+            newStagePintX = fieldPoint.x + 0.000; newStagePintY = fieldPoint.y + 0.081; newStagePintZ = fieldPoint.z - 0.096
         case 9:
-            newStagePintX = fieldPoint.x + 0.098; newStagePintY = fieldPoint.y + 0.081; newStagePintZ = fieldPoint.z + 0.096
+             newStagePintX = fieldPoint.x + 0.098; newStagePintY = fieldPoint.y + 0.081; newStagePintZ = fieldPoint.z - 0.096
         default:
             return
         }
+        
+        // 新しいオブジェクトの座標を規定
+        let newFieldPoint = SCNVector3(x: newStagePintX!, y: newStagePintY!, z: newStagePintZ!)
+        //　ワールド座標系に変換
+        print("newStagePoint:\(newFieldPoint)")
+//        let finalPoint = sceneView.projectPoint(newFieldPoint
+//        print("finalPoint:\(finalPoint)")
+        // ノードの大きさ変更
+        pawnNode!.scale = SCNVector3(0.02, 0.02, 0.02)
+        // 表示する座標を指定する
+        pawnNode!.position = newFieldPoint
+        // ノードの作成
+        targetSceneView.scene.rootNode.addChildNode(pawnNode!)
     
     }
 }

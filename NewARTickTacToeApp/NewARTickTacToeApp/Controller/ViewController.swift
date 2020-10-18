@@ -14,6 +14,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
     
+    
     var count = 0
     var fieldPoint: SCNVector3?
     var gameFlag = 0 {
@@ -48,13 +49,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
         setUp()
+        
+        
     }
     
     // 初期設定
@@ -99,7 +96,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // pawnの表示
         if let fieldPoint = fieldPoint {
-            pawn.makePawn(playerColor: playerColor, fieldNumber: placeNumber, fieldPoint: fieldPoint)
+            pawn.makePawn(playerColor: playerColor, fieldNumber: placeNumber, fieldPoint: fieldPoint, targetSceneView: sceneView)
         }
         
         
@@ -155,9 +152,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     @IBAction func startButtonAction(_ sender: Any) {
+        print(count)
         // フィールドの設定をする
         fieldPoint = makeField.makeField(targetSceneView: sceneView)
-        
+        count += 1
         // 次のplayerの表示
         let nextPlayer = player.player(count: count)
         let nextPlayerName = nextPlayer.0
