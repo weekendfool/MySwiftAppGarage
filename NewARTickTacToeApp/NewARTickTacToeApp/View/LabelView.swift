@@ -18,8 +18,8 @@ class MainLabel {
         // ラベルの位置決定
         mainLabel.frame = CGRect(x:0, y: 0, width: screenWidth, height: screenHeight / 12)
         // ラベルの色決定
-        mainLabel.textColor = UIColor.gray
-        mainLabel.backgroundColor = UIColor.black
+        mainLabel.textColor = UIColor.systemGray
+        
         // ラベルの文字サイズを設定
         mainLabel.font = UIFont.systemFont(ofSize: 30)
         // ラベルの位置決定
