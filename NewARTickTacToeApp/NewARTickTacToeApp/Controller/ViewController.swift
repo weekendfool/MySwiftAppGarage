@@ -94,9 +94,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // ボタン用の配列作成
         let namberButtonArray = makeButton.setNumverButtonArray()
             makeButton.changeCoulerButton(buttonNumber: placeNumber, player: playerColor, buttonArray: namberButtonArray, targetView: mainView!)
-        
-        
-        
         // pawnの表示
         if let fieldPoint = fieldPoint {
             pawn.makePawn(playerColor: playerColor, fieldNumber: placeNumber, fieldPoint: fieldPoint, targetSceneView: sceneView)
@@ -106,6 +103,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         //色の保存
         let colorDic = saveColor.saveColor(InputColor: playerColor, placeNumber: placeNumber)
+        print("colorDic:\(colorDic)")
         //　勝敗の判定
         gameFlag = judgmentWiner.judgmentWiner(colorDic: colorDic, count: count)
         

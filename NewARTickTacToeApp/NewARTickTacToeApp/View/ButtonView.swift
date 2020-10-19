@@ -191,7 +191,7 @@ class MakeButton {
         for buttanName in buttonArray {
             buttanName.backgroundColor = UIColor.clear
             //ボタンの文字色を変える処理
-            buttanName.setTitleColor(UIColor.systemBlue, for: .normal)
+            buttanName.setTitleColor(UIColor.darkGray, for: .normal)
             buttanName.isEnabled = true
         }
     }

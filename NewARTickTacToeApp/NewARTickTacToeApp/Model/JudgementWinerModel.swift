@@ -47,6 +47,7 @@ class JudgmentWiner {
                 returnNmber = 3
             }
         }
+        print("returnNmber:\(returnNmber)")
         return returnNmber
     }
 

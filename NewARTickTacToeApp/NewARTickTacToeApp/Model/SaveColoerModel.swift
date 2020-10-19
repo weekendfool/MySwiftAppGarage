@@ -10,8 +10,10 @@ import Foundation
 
 class SaveColor {
     
+    var colorDic: [Int: Int] = [1:0, 2:0, 3:0, 4:0, 5:0, 6:0, 7:0, 8:0, 9:0]
+    
     func saveColor(InputColor: Int, placeNumber: Int) -> [Int: Int] {
-        var colorDic: [Int: Int] = [1:0, 2:0, 3:0, 4:0, 5:0, 6:0, 7:0, 8:0, 9:0]
+        
         // 入力された場所と数字を記録
         colorDic[placeNumber] = InputColor
         // 返り値として色が格納された辞書を返す
