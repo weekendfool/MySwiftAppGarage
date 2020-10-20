@@ -14,7 +14,7 @@ import ARKit
 class MakeField {
     
     // カメラ座標の中心座標を記録してフィールドを展開する処理
-    func makeField(targetSceneView: ARSCNView) -> SCNVector3 {
+    func makeField(targetSceneView: ARSCNView) -> (SCNVector3, SCNNode) {
         // 座標の決定
         //　カメラ座標系で50㎝手前にfieldの中心を設置
         let infrontOfCamera = SCNVector3(x: 0, y: 0, z: -0.5)
@@ -38,7 +38,7 @@ class MakeField {
         // ノードの作成
         targetSceneView.scene.rootNode.addChildNode(fieldNode!)
         
-        return fieldPoint!
+        return (fieldPoint!, fieldNode!)
 
     }
 

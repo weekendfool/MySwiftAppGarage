@@ -15,7 +15,7 @@ class Pawn {
     
     
     // ポーンを生成する処理
-    func makePawn(playerColor: Int, fieldNumber: Int, fieldPoint: SCNVector3, targetSceneView: ARSCNView) {
+    func makePawn(playerColor: Int, fieldNumber: Int, fieldPoint: SCNVector3, targetSceneView: ARSCNView) -> SCNNode {
                 
 //        // pawanの場所を格納する変数
 //        var pawnPoint:SCNVector3?
@@ -63,7 +63,7 @@ class Pawn {
         case 9:
              newStagePintX = fieldPoint.x + 0.098; newStagePintY = fieldPoint.y + 0.081; newStagePintZ = fieldPoint.z - 0.096
         default:
-            return
+            print("Make Pawn Error")
         }
         
         // 新しいオブジェクトの座標を規定
@@ -79,6 +79,9 @@ class Pawn {
         // ノードの作成
         targetSceneView.scene.rootNode.addChildNode(pawnNode!)
     
+        return pawnNode!
     }
+    
+    
 }
 

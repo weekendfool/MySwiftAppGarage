@@ -12,10 +12,13 @@ import SceneKit
 
 class DeleteAR {
     
-    func deleteAR(fieldNode: SCNNode, pawnNode: SCNNode) {
+    func deleteAR(nodeArray: [SCNNode]) {
         // ノードの削除
-        fieldNode.removeFromParentNode()
-        pawnNode.removeFromParentNode()
+        for node in nodeArray {
+//            if let node = node {
+                node.removeFromParentNode()
+//            }
+        }
     }
     
 }

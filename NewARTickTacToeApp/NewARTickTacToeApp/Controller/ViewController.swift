@@ -14,16 +14,20 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
     
-    var array: [UIButton]?
+    var numberButtonArray: [UIButton]?
+    var gameButtonArray: [UIButton]?
     var count = 0
     var fieldPoint: SCNVector3?
-    var gameFlag = 0 {
+    var winOrLoseFlag = 0 {
         didSet {
-            switch gameFlag {
+            switch winOrLoseFlag {
             case 1:
+                print("win")
                 mainLabel.changeLabelString(messageString: "1P Win Finish" )
+                gameFinished()
             case 2:
                 mainLabel.changeLabelString(messageString: "2P Win Finish" )
+                gameFinished()
             case 3:
                 mainLabel.changeLabelString(messageString: "Draw Finish" )
             default:
@@ -31,6 +35,16 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             }
         }
     }
+    
+    var gameStartFlag: Bool? {
+        didSet {
+            if let gameButtonArray = gameButtonArray {
+                setButton.gameStartedButtonMode(gameStartFlag: gameStartFlag!, gameButtonArray: gameButtonArray)
+            }
+        }
+    }
+    
+    var nodeArray: [SCNNode]?
     
     // 各インスタンスの設定
     // modelのインスタンス
@@ -63,13 +77,15 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // ボタンの作成
         // ボタン用の配列作成
-        let namberButtonArray = makeButton.setNumverButtonArray()
-        let gameButtonArray = makeButton.setGameButtonArray()
+//        numberButtonArray = makeButton.setNumverButtonArray()
+        gameButtonArray = makeButton.setGameButtonArray()
         // ボタンの描画
-        // 数字ボタンの追加
-        makeButton.makeButton(screenWidth: myScreenSize.0, screenHeight: myScreenSize.1, buttonArray: namberButtonArray, targetView: mainView!)
+        // ボタンの設定
+        numberButtonArray = makeButton.setNumverButtonArray()
+        makeButton.makeButton(screenWidth: myScreenSize.0, screenHeight: myScreenSize.1, buttonArray: numberButtonArray!, targetView: mainView!)
+
         // スタートボタンの追加
-        makeButton.makeButton(screenWidth: myScreenSize.0, screenHeight: myScreenSize.1, buttonArray: gameButtonArray, targetView: mainView!)
+        makeButton.makeButton(screenWidth: myScreenSize.0, screenHeight: myScreenSize.1, buttonArray: gameButtonArray!, targetView: mainView!)
         
         // ラベルの作成
         mainLabel.makeLabel(screenWidth: myScreenSize.0, screenHeight: myScreenSize.1, targetView: mainView!)
@@ -77,7 +93,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // arの設定
         settingAR.setAR(targetViewController: self, targetSceneView: sceneView)
-       
         
     }
     
@@ -91,12 +106,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let playerColor = playerInfo.1
         
         // buttonの色変え
-        // ボタン用の配列作成
-        let namberButtonArray = makeButton.setNumverButtonArray()
-            makeButton.changeCoulerButton(buttonNumber: placeNumber, player: playerColor, buttonArray: namberButtonArray, targetView: mainView!)
+        makeButton.changeCoulerButton(buttonNumber: placeNumber, player: playerColor, buttonArray: numberButtonArray!, targetView: mainView!)
         // pawnの表示
         if let fieldPoint = fieldPoint {
-            pawn.makePawn(playerColor: playerColor, fieldNumber: placeNumber, fieldPoint: fieldPoint, targetSceneView: sceneView)
+            let newPawnNode = pawn.makePawn(playerColor: playerColor, fieldNumber: placeNumber, fieldPoint: fieldPoint, targetSceneView: sceneView)
+            // 新しいPawnNodeを格納
+            
+            nodeArray!.append(newPawnNode)
         }
         
         // 画面の再描画
@@ -105,21 +121,33 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let colorDic = saveColor.saveColor(InputColor: playerColor, placeNumber: placeNumber)
         print("colorDic:\(colorDic)")
         //　勝敗の判定
-        gameFlag = judgmentWiner.judgmentWiner(colorDic: colorDic, count: count)
+        winOrLoseFlag = judgmentWiner.judgmentWiner(colorDic: colorDic, count: count)
         
-        // countのカウントアップ
-        count += 1
-        // ラベルに反映
-        // 次のplayerの表示
-        let nextPlayer = player.player(count: count)
-        let nextPlayerName = nextPlayer.0
+        // 勝敗が決まっていない時
+        if winOrLoseFlag == 0 {
+            // countのカウントアップ
+            count += 1
+            // ラベルに反映
+            // 次のplayerの表示
+            let nextPlayer = player.player(count: count)
+            let nextPlayerName = nextPlayer.0
 //        let nextPlayerColor = playerInfo.1
-        mainLabel.changeLabelString(messageString: nextPlayerName)
+            mainLabel.changeLabelString(messageString: nextPlayerName)
+        }
+        
+    }
+    
+    // 勝敗が決まった時の処理
+    func gameFinished() {
+        // ボタンの固定
+        // ボタン用の配列作成
+        setButton.buttonModeChange(gameStartFlag: gameStartFlag!, numberButtonArray: numberButtonArray!)
     }
     
     // MARK: - ボタン押した時の処理
     @IBAction func oneButtonAction(_ sender: Any) {
         buttonAction(placeNumber: 1)
+        print("nodeArray:\(nodeArray)")
         
     }
     
@@ -156,24 +184,29 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     @IBAction func startButtonAction(_ sender: Any) {
         print(count)
+       
         // フィールドの設定をする
-        fieldPoint = makeField.makeField(targetSceneView: sceneView)
+        let fieldInfo = makeField.makeField(targetSceneView: sceneView)
+        fieldPoint = fieldInfo.0
+        // fieldのノードを格納
+        print("fieldInfo:\(fieldInfo.1)")
+        nodeArray = [fieldInfo.1]
         
-        array = makeButton.setNumverButtonArray()
-        print(array)
+        // gameStartFlagの設定
+        gameStartFlag = true
         count += 1
         // 次のplayerの表示
         let nextPlayer = player.player(count: count)
         let nextPlayerName = nextPlayer.0
         // ラベルの変更
         mainLabel.changeLabelString(messageString: nextPlayerName)
+        print("nodeArray:\(nodeArray)")
     }
     
     @IBAction func resetButtonAction(_ sender: Any) {
         // オブジェクトの消去
-//        deleteAR.deleteAR(fieldNode: <#T##SCNNode#>, pawnNode: <#T##SCNNode#>)
+        deleteAR.deleteAR(nodeArray: nodeArray!)
         // buttonの有効化、無効化
-        let namberButtonArray = makeButton.setNumverButtonArray()
-        makeButton.resetButton(buttonArray: namberButtonArray)
+        makeButton.resetButton(buttonArray: numberButtonArray!)
     }
 }

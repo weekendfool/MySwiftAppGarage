@@ -24,17 +24,17 @@ class MakeButton {
     var startButton = UIButton()
     var resetButton = UIButton()
     
-    @IBOutlet weak var oneButtonOutlet: UIButton!
-    @IBOutlet weak var tewButtonOutlet: UIButton!
-    @IBOutlet weak var threeButtonOutlet: UIButton!
-    @IBOutlet weak var fourButtonOutlet: UIButton!
-    @IBOutlet weak var fiveButtonOutlet: UIButton!
-    @IBOutlet weak var sixButtonOutlet: UIButton!
-    @IBOutlet weak var sevenButtonOutlet: UIButton!
-    @IBOutlet weak var eightButtonOutlet: UIButton!
-    @IBOutlet weak var nineButtonOutlet: UIButton!
-    @IBOutlet weak var startButtonOutlet: UIButton!
-    @IBOutlet weak var resetButtonOutlet: UIButton!
+//    @IBOutlet weak var oneButtonOutlet: UIButton!
+//    @IBOutlet weak var tewButtonOutlet: UIButton!
+//    @IBOutlet weak var threeButtonOutlet: UIButton!
+//    @IBOutlet weak var fourButtonOutlet: UIButton!
+//    @IBOutlet weak var fiveButtonOutlet: UIButton!
+//    @IBOutlet weak var sixButtonOutlet: UIButton!
+//    @IBOutlet weak var sevenButtonOutlet: UIButton!
+//    @IBOutlet weak var eightButtonOutlet: UIButton!
+//    @IBOutlet weak var nineButtonOutlet: UIButton!
+//    @IBOutlet weak var startButtonOutlet: UIButton!
+//    @IBOutlet weak var resetButtonOutlet: UIButton!
     
     
     func setNumverButtonArray() -> [UIButton] {
@@ -50,12 +50,12 @@ class MakeButton {
         return gameButtonArray
     }
     
-    func setNumverButtonOutletArray() -> [UIButton] {
-        // 番号ボタンの配列を作成
-        let numberButtonOutletArray: [UIButton] = [oneButtonOutlet, tewButtonOutlet, threeButtonOutlet, fourButtonOutlet, fiveButtonOutlet, sixButtonOutlet, sevenButtonOutlet, eightButtonOutlet, nineButtonOutlet]
-        
-        return numberButtonOutletArray
-    }
+//    func setNumverButtonOutletArray() -> [UIButton] {
+//        // 番号ボタンの配列を作成
+//        let numberButtonOutletArray: [UIButton] = [oneButtonOutlet, tewButtonOutlet, threeButtonOutlet, fourButtonOutlet, fiveButtonOutlet, sixButtonOutlet, sevenButtonOutlet, eightButtonOutlet, nineButtonOutlet]
+//
+//        return numberButtonOutletArray
+//    }
     
     // ボタンをviewに描写する
     func makeButton(screenWidth:CGFloat, screenHeight:CGFloat, buttonArray:[UIButton], targetView: UIView) {
