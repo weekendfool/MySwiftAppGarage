@@ -13,11 +13,14 @@ import ARKit
 class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
-    
+    // buttonのインスタンス格納用変数
     var numberButtonArray: [UIButton]?
     var gameButtonArray: [UIButton]?
+    // 何ターン目かを記録する変数
     var count = 0
+    // ARfieldの座標を保存しておく変数
     var fieldPoint: SCNVector3?
+    // 勝敗がついているかのフラグ
     var winOrLoseFlag = 0 {
         didSet {
             switch winOrLoseFlag {
@@ -35,7 +38,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             }
         }
     }
-    
+    // ゲームが開始されてるかのフラグ
     var gameStartFlag: Bool? {
         didSet {
             if let gameButtonArray = gameButtonArray {
@@ -43,7 +46,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             }
         }
     }
-    
+    // ARNode格納用変数
     var nodeArray: [SCNNode]?
     
     // 各インスタンスの設定
@@ -204,9 +207,18 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     @IBAction func resetButtonAction(_ sender: Any) {
+        // ゲームフラグの変更
+        gameStartFlag = false
         // オブジェクトの消去
         deleteAR.deleteAR(nodeArray: nodeArray!)
         // buttonの有効化、無効化
         makeButton.resetButton(buttonArray: numberButtonArray!)
+        
+        // ボタンのモード変更
+        setButton.buttonModeChange(gameStartFlag: gameStartFlag!, numberButtonArray: numberButtonArray!)
+        setButton.gameStartedButtonMode(gameStartFlag: gameStartFlag!, gameButtonArray: gameButtonArray!)
+        
+        // 色格納用辞書のリセット
+        saveColor.resetColorDic()
     }
 }
