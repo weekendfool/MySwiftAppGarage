@@ -18,14 +18,14 @@ class SetButton {
         let resetButton = gameButtonArray[1]
         
         if gameStartFlag == 0 { // ゲーム開始時
+            startButton.isEnabled = true
+            resetButton.isEnabled = false
+        } else if gameStartFlag == 1 { // ゲーム中
             startButton.isEnabled = false
             resetButton.isEnabled = true
-        } else if gameStartFlag == 1 { // ゲーム中
-            startButton.isEnabled = true
-            resetButton.isEnabled = false
         } else if gameStartFlag == 2 { // 勝敗決定時
-            startButton.isEnabled = true
-            resetButton.isEnabled = false
+            startButton.isEnabled = false
+            resetButton.isEnabled = true
         }
         
         
