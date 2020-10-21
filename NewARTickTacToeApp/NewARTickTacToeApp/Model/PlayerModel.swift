@@ -14,17 +14,17 @@ class Player {
     func player(count: Int) -> (String, Int) {
         //　返り値を格納する変数
         var playerName = ""
-        var playerColoer = 0
+        var playerColor = 0
         // countの奇数偶数で場合分けする
         if count % 2 == 1{
             playerName = "1P"
-            playerColoer = 1
+            playerColor = 1
         } else {
             playerName = "2P"
-            playerColoer = 2
+            playerColor = 2
         }
 
-            return (playerName, playerColoer)
+            return (playerName, playerColor)
     }
     
     

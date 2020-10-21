@@ -124,7 +124,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // 画面の再描画
         
         //色の保存
-        let colorDic = saveColor.saveColor(InputColor: playerColor, placeNumber: placeNumber)
+        let colorDic = saveColor.saveColor(inputColor: playerColor, placeNumber: placeNumber)
         print("colorDic:\(colorDic)")
         //　勝敗の判定
         winOrLoseFlag = judgmentWiner.judgmentWiner(colorDic: colorDic, count: count)

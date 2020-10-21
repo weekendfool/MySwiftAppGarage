@@ -7,6 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C43363F253FE56F00C9CB08 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C464FE52532D7C600FCFC2E /* PlayerModel.swift */; };
+		8C433640253FE56F00C9CB08 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C464FE52532D7C600FCFC2E /* PlayerModel.swift */; };
+		8C433641253FE57400C9CB08 /* GetScreenSizeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DFFC2253540DE00DE09AE /* GetScreenSizeModel.swift */; };
+		8C433642253FE57500C9CB08 /* GetScreenSizeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DFFC2253540DE00DE09AE /* GetScreenSizeModel.swift */; };
+		8C433643253FE57A00C9CB08 /* SaveColoerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DFFCC2535585700DE09AE /* SaveColoerModel.swift */; };
+		8C433644253FE57B00C9CB08 /* SaveColoerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DFFCC2535585700DE09AE /* SaveColoerModel.swift */; };
+		8C433645253FE57F00C9CB08 /* SetButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DFFC4253542BC00DE09AE /* SetButtonModel.swift */; };
+		8C433646253FE57F00C9CB08 /* SetButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DFFC4253542BC00DE09AE /* SetButtonModel.swift */; };
+		8C433647253FE58200C9CB08 /* MakeFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DFFC82535467C00DE09AE /* MakeFieldModel.swift */; };
+		8C433648253FE58300C9CB08 /* MakeFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DFFC82535467C00DE09AE /* MakeFieldModel.swift */; };
+		8C433649253FE58600C9CB08 /* SetARModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DFFCA253546F300DE09AE /* SetARModel.swift */; };
+		8C43364A253FE58700C9CB08 /* SetARModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DFFCA253546F300DE09AE /* SetARModel.swift */; };
+		8C43364B253FE58A00C9CB08 /* JudgementWinerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DFFCE25355C2200DE09AE /* JudgementWinerModel.swift */; };
+		8C43364C253FE58B00C9CB08 /* JudgementWinerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DFFCE25355C2200DE09AE /* JudgementWinerModel.swift */; };
+		8C43364D253FE58E00C9CB08 /* MakePawnModle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DFFD02535609800DE09AE /* MakePawnModle.swift */; };
+		8C43364E253FE58F00C9CB08 /* MakePawnModle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DFFD02535609800DE09AE /* MakePawnModle.swift */; };
+		8C43364F253FE59500C9CB08 /* DeleteARModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DFFD2253739D000DE09AE /* DeleteARModel.swift */; };
+		8C433650253FE59500C9CB08 /* DeleteARModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DFFD2253739D000DE09AE /* DeleteARModel.swift */; };
+		8C433651253FE59900C9CB08 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DFFC02532EFCB00DE09AE /* ButtonView.swift */; };
+		8C433652253FE59B00C9CB08 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DFFC02532EFCB00DE09AE /* ButtonView.swift */; };
+		8C433653253FE59D00C9CB08 /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DFFC6253543DA00DE09AE /* LabelView.swift */; };
+		8C433654253FE59E00C9CB08 /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DFFC6253543DA00DE09AE /* LabelView.swift */; };
+		8C433655253FE5BC00C9CB08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C464FB62532C6ED00FCFC2E /* ViewController.swift */; };
+		8C433656253FE5BD00C9CB08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C464FB62532C6ED00FCFC2E /* ViewController.swift */; };
+		8C433657253FED6100C9CB08 /* NewARTickTacToeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C464FC92532C6EE00FCFC2E /* NewARTickTacToeAppTests.swift */; };
 		8C464FB32532C6ED00FCFC2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C464FB22532C6ED00FCFC2E /* AppDelegate.swift */; };
 		8C464FB52532C6ED00FCFC2E /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C464FB42532C6ED00FCFC2E /* art.scnassets */; };
 		8C464FB72532C6ED00FCFC2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C464FB62532C6ED00FCFC2E /* ViewController.swift */; };
@@ -337,6 +362,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C433649253FE58600C9CB08 /* SetARModel.swift in Sources */,
+				8C433643253FE57A00C9CB08 /* SaveColoerModel.swift in Sources */,
+				8C43364D253FE58E00C9CB08 /* MakePawnModle.swift in Sources */,
+				8C433645253FE57F00C9CB08 /* SetButtonModel.swift in Sources */,
+				8C433640253FE56F00C9CB08 /* PlayerModel.swift in Sources */,
+				8C433653253FE59D00C9CB08 /* LabelView.swift in Sources */,
+				8C433641253FE57400C9CB08 /* GetScreenSizeModel.swift in Sources */,
+				8C433651253FE59900C9CB08 /* ButtonView.swift in Sources */,
+				8C433655253FE5BC00C9CB08 /* ViewController.swift in Sources */,
+				8C43364B253FE58A00C9CB08 /* JudgementWinerModel.swift in Sources */,
+				8C43364F253FE59500C9CB08 /* DeleteARModel.swift in Sources */,
+				8C433647253FE58200C9CB08 /* MakeFieldModel.swift in Sources */,
 				8C464FCA2532C6EE00FCFC2E /* NewARTickTacToeAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +382,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C43364A253FE58700C9CB08 /* SetARModel.swift in Sources */,
+				8C433644253FE57B00C9CB08 /* SaveColoerModel.swift in Sources */,
+				8C43364E253FE58F00C9CB08 /* MakePawnModle.swift in Sources */,
+				8C433646253FE57F00C9CB08 /* SetButtonModel.swift in Sources */,
+				8C43363F253FE56F00C9CB08 /* PlayerModel.swift in Sources */,
+				8C433654253FE59E00C9CB08 /* LabelView.swift in Sources */,
+				8C433657253FED6100C9CB08 /* NewARTickTacToeAppTests.swift in Sources */,
+				8C433642253FE57500C9CB08 /* GetScreenSizeModel.swift in Sources */,
+				8C433652253FE59B00C9CB08 /* ButtonView.swift in Sources */,
+				8C433656253FE5BD00C9CB08 /* ViewController.swift in Sources */,
+				8C43364C253FE58B00C9CB08 /* JudgementWinerModel.swift in Sources */,
+				8C433650253FE59500C9CB08 /* DeleteARModel.swift in Sources */,
+				8C433648253FE58300C9CB08 /* MakeFieldModel.swift in Sources */,
 				8C464FD52532C6EE00FCFC2E /* NewARTickTacToeAppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
