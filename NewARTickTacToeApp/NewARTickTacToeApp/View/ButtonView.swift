@@ -24,18 +24,6 @@ class MakeButton {
     var startButton = UIButton()
     var resetButton = UIButton()
     
-//    @IBOutlet weak var oneButtonOutlet: UIButton!
-//    @IBOutlet weak var tewButtonOutlet: UIButton!
-//    @IBOutlet weak var threeButtonOutlet: UIButton!
-//    @IBOutlet weak var fourButtonOutlet: UIButton!
-//    @IBOutlet weak var fiveButtonOutlet: UIButton!
-//    @IBOutlet weak var sixButtonOutlet: UIButton!
-//    @IBOutlet weak var sevenButtonOutlet: UIButton!
-//    @IBOutlet weak var eightButtonOutlet: UIButton!
-//    @IBOutlet weak var nineButtonOutlet: UIButton!
-//    @IBOutlet weak var startButtonOutlet: UIButton!
-//    @IBOutlet weak var resetButtonOutlet: UIButton!
-    
     
     func setNumverButtonArray() -> [UIButton] {
         // 番号ボタンの配列を作成
@@ -49,13 +37,6 @@ class MakeButton {
         
         return gameButtonArray
     }
-    
-//    func setNumverButtonOutletArray() -> [UIButton] {
-//        // 番号ボタンの配列を作成
-//        let numberButtonOutletArray: [UIButton] = [oneButtonOutlet, tewButtonOutlet, threeButtonOutlet, fourButtonOutlet, fiveButtonOutlet, sixButtonOutlet, sevenButtonOutlet, eightButtonOutlet, nineButtonOutlet]
-//
-//        return numberButtonOutletArray
-//    }
     
     // ボタンをviewに描写する
     func makeButton(screenWidth:CGFloat, screenHeight:CGFloat, buttonArray:[UIButton], targetView: UIView) {
@@ -151,8 +132,6 @@ class MakeButton {
                 // buttonのフォントサイズを設定
                 buttonName.titleLabel?.font = UIFont.systemFont(ofSize: 28)
                 
-                
-                
                 // ボタンの枠線を設定
                 buttonName.layer.borderColor = UIColor.darkGray.cgColor
                 buttonName.layer.borderWidth = 2.0
@@ -177,12 +156,9 @@ class MakeButton {
                 buttonName.backgroundColor = UIColor.blue
             }
             //ボタンの文字色を変える処理
-        buttonName.setTitleColor(UIColor.gray, for: [.normal, .disabled])
+            buttonName.setTitleColor(UIColor.gray, for: [.normal, .disabled])
             //二回以上選択できなくする処理
             buttonName.isEnabled = false
-        
-//        targetView.addSubview(buttonName)
-        
     }
     
     // リセットボタンが押された時の挙動

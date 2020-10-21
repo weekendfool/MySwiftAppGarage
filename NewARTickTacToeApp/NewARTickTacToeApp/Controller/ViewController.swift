@@ -25,7 +25,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         didSet {
             switch winOrLoseFlag {
             case 1:
-                print("win")
                 mainLabel.changeLabelString(messageString: "1P Win Finish" )
                 gameFinished()
             case 2:
@@ -33,13 +32,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 gameFinished()
             case 3:
                 mainLabel.changeLabelString(messageString: "Draw Finish" )
+                gameFinished()
             default:
                 mainLabel.changeLabelString(messageString: "Please Tap Reset Button")
             }
         }
     }
     // ゲームが開始されてるかのフラグ
-    var gameStartFlag: Bool? {
+    var gameStartFlag: Int? {
         didSet {
             if let gameButtonArray = gameButtonArray {
                 setButton.gameStartedButtonMode(gameStartFlag: gameStartFlag!, gameButtonArray: gameButtonArray)
@@ -77,18 +77,21 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let mainView = view
         // スクリーンサイズの取得
         let myScreenSize = getScreenSize.setScreenSize()
+        // gameStartFlagの初期化
+        gameStartFlag = 0
         
         // ボタンの作成
         // ボタン用の配列作成
-//        numberButtonArray = makeButton.setNumverButtonArray()
+        numberButtonArray = makeButton.setNumverButtonArray()
         gameButtonArray = makeButton.setGameButtonArray()
         // ボタンの描画
-        // ボタンの設定
-        numberButtonArray = makeButton.setNumverButtonArray()
+        // 数字ボタンの追加
         makeButton.makeButton(screenWidth: myScreenSize.0, screenHeight: myScreenSize.1, buttonArray: numberButtonArray!, targetView: mainView!)
-
         // スタートボタンの追加
         makeButton.makeButton(screenWidth: myScreenSize.0, screenHeight: myScreenSize.1, buttonArray: gameButtonArray!, targetView: mainView!)
+        // ボタンの状態の設定
+        setButton.gameStartedButtonMode(gameStartFlag: gameStartFlag!, gameButtonArray: gameButtonArray!)
+        setButton.buttonModeChange(gameStartFlag: gameStartFlag!, numberButtonArray: numberButtonArray!)
         
         // ラベルの作成
         mainLabel.makeLabel(screenWidth: myScreenSize.0, screenHeight: myScreenSize.1, targetView: mainView!)
@@ -142,6 +145,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     // 勝敗が決まった時の処理
     func gameFinished() {
+        // gameStartFlagのフラグ変更
+        gameStartFlag = 2
         // ボタンの固定
         // ボタン用の配列作成
         setButton.buttonModeChange(gameStartFlag: gameStartFlag!, numberButtonArray: numberButtonArray!)
@@ -196,8 +201,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         nodeArray = [fieldInfo.1]
         
         // gameStartFlagの設定
-        gameStartFlag = true
+        gameStartFlag = 1
         count += 1
+        
+        // ボタンの有効化
+        setButton.buttonModeChange(gameStartFlag: gameStartFlag!, numberButtonArray: numberButtonArray!)
+        
         // 次のplayerの表示
         let nextPlayer = player.player(count: count)
         let nextPlayerName = nextPlayer.0
@@ -208,7 +217,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     @IBAction func resetButtonAction(_ sender: Any) {
         // ゲームフラグの変更
-        gameStartFlag = false
+        gameStartFlag = 0
+        // カウンターの初期化
+        count = 0
         // オブジェクトの消去
         deleteAR.deleteAR(nodeArray: nodeArray!)
         // buttonの有効化、無効化
@@ -220,5 +231,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // 色格納用辞書のリセット
         saveColor.resetColorDic()
+        
+        // label変更
+        mainLabel.setFirstString()
     }
 }
