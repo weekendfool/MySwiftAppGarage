@@ -232,16 +232,16 @@ class NewARTickTacToeAppTests: XCTestCase {
                                                 let dic: [Int: Int] = [1: number1, 2: number2, 3: number3, 4: number4, 5: number5, 6: number6, 7: number7, 8: number8, 9: number9]
     //                                                    print(dic)
                                                         
-                                                let returnNmber = judgementWiner.judgmentWiner(colorDic: dic, count: num)
+                                                let returnNmber = judgementWiner.judgmentWiner(colorDic: dic, count: 9)
                                                 for array1 in winPatternArray1 {
                                                     for array2 in winPatternArray2 {
-                                                        if (dic != array1 || dic != array2) && num == 9{
+                                                        if (dic != array1 && dic != array2) && num == 9{
                                                             XCTAssertEqual(returnNmber, 3)
-                                                            print("-----------------------------------")
-                                                            print("dic:\(dic)")
-                                                            print("array1:\(array1)")
-                                                            print("array2:\(array2)")
-                                                            print("num:\(num)")
+//                                                            print("-----------------------------------")
+//                                                            print("dic:\(dic)")
+//                                                            print("array1:\(array1)")
+//                                                            print("array2:\(array2)")
+//                                                            print("num:\(num)")
                                                         //                                                        count += 1
                                                         }
                                                     }
