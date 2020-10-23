@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C058573254324D7002F8507 /* NewARTickTacToeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C464FC92532C6EE00FCFC2E /* NewARTickTacToeAppTests.swift */; };
 		8C43363F253FE56F00C9CB08 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C464FE52532D7C600FCFC2E /* PlayerModel.swift */; };
 		8C433640253FE56F00C9CB08 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C464FE52532D7C600FCFC2E /* PlayerModel.swift */; };
 		8C433641253FE57400C9CB08 /* GetScreenSizeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DFFC2253540DE00DE09AE /* GetScreenSizeModel.swift */; };
@@ -348,6 +349,7 @@
 				8C4DFFC92535467C00DE09AE /* MakeFieldModel.swift in Sources */,
 				8C4DFFCB253546F300DE09AE /* SetARModel.swift in Sources */,
 				8C4DFFCD2535585700DE09AE /* SaveColoerModel.swift in Sources */,
+				8C058573254324D7002F8507 /* NewARTickTacToeAppTests.swift in Sources */,
 				8C4DFFC7253543DA00DE09AE /* LabelView.swift in Sources */,
 				8C4DFFC5253542BC00DE09AE /* SetButtonModel.swift in Sources */,
 				8C4DFFC3253540DE00DE09AE /* GetScreenSizeModel.swift in Sources */,

@@ -118,6 +118,8 @@ class NewARTickTacToeAppTests: XCTestCase {
 //                                                            print("dic:\(dic)")
 //                                                            print("array:\(array)")
                                                             count += 1
+                                                        } else if dic != array && returnNmber != 2 && num == 9 {
+                                                            XCTAssertEqual(returnNmber, 3)
                                                         }
                                                     }
                                                 }
@@ -172,7 +174,9 @@ class NewARTickTacToeAppTests: XCTestCase {
 //                                                            print("-----------------------------------")
 //                                                            print("dic:\(dic)")
 //                                                            print("array:\(array)")
-                                                        }
+//                                                        } else if dic != array && returnNmber != 1 && num == 9 {
+//                                                        XCTAssertEqual(returnNmber, 3)
+//                                                        }
                                                     }
                                                 }
                                             }
@@ -201,7 +205,7 @@ class NewARTickTacToeAppTests: XCTestCase {
         // 斜め一列
         let winPatternDic17: [Int: Int] = [1: 1, 5: 1, 9: 1]
         let winPatternDic18: [Int: Int] = [3: 1, 5: 1, 7: 1]
-        
+
         // プレイヤーが勝利した時のパターン配列
         // 横一列
         let winPatternDic21: [Int: Int] = [1: 2, 2: 2, 3: 2]
@@ -214,11 +218,11 @@ class NewARTickTacToeAppTests: XCTestCase {
         // 斜め一列
         let winPatternDic27: [Int: Int] = [1: 2, 5: 2, 9: 2]
         let winPatternDic28: [Int: Int] = [3: 2, 5: 2, 7: 2]
-            
+
         let winPatternArray1 = [winPatternDic11, winPatternDic12, winPatternDic13, winPatternDic14, winPatternDic15, winPatternDic16, winPatternDic17, winPatternDic18]
-        
+
         let winPatternArray2 = [winPatternDic21, winPatternDic22, winPatternDic23, winPatternDic24, winPatternDic25, winPatternDic26, winPatternDic27, winPatternDic28]
-            
+
         for num in 0...9 {
             for number1 in 0...2 {
                 for number2 in 0...2 {
@@ -231,21 +235,23 @@ class NewARTickTacToeAppTests: XCTestCase {
                                             for number9 in 0...2 {
                                                 let dic: [Int: Int] = [1: number1, 2: number2, 3: number3, 4: number4, 5: number5, 6: number6, 7: number7, 8: number8, 9: number9]
     //                                                    print(dic)
-                                                        
-                                                let returnNmber = judgementWiner.judgmentWiner(colorDic: dic, count: 9)
+
+
                                                 for array1 in winPatternArray1 {
                                                     for array2 in winPatternArray2 {
-                                                        if (dic != array1 && dic != array2) && num == 9{
-                                                            XCTAssertEqual(returnNmber, 3)
-//                                                            print("-----------------------------------")
-//                                                            print("dic:\(dic)")
+                                                        let returnNmber = judgementWiner.judgmentWiner(colorDic: dic, count: num)
+                                                        if returnNmber == 2 {
+                                                            
+                                                            XCTAssertEqual(returnNmber, 2)
+                                                            print("-----------------------------------")
+                                                            print("dic:\(dic)")
 //                                                            print("array1:\(array1)")
 //                                                            print("array2:\(array2)")
-//                                                            print("num:\(num)")
+                                                            print("num:\(num)")
                                                         //                                                        count += 1
                                                         }
                                                     }
-                                                    
+                                                }
                                                 }
                                             }
                                         }
