@@ -1,0 +1,797 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		15D39AA9A7E560638E51EB1D /* Pods_AgentBlackAndWhiteApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2063A25547215B83B1CF3762 /* Pods_AgentBlackAndWhiteApp.framework */; };
+		2AFFECB6D3A96B4F2DE48CB4 /* Pods_AgentBlackAndWhiteApp_AgentBlackAndWhiteAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B44E0D119F714CC0C01CE6DA /* Pods_AgentBlackAndWhiteApp_AgentBlackAndWhiteAppUITests.framework */; };
+		8C535B2825B3F230003E2C3D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C535B2725B3F230003E2C3D /* GameViewController.swift */; };
+		8C535B2A25B3F2D3003E2C3D /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C535B2925B3F2D3003E2C3D /* RoomViewController.swift */; };
+		8C57A56C25B3E33500615843 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C57A56B25B3E33500615843 /* AppDelegate.swift */; };
+		8C57A56E25B3E33500615843 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C57A56D25B3E33500615843 /* art.scnassets */; };
+		8C57A57325B3E33500615843 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C57A57125B3E33500615843 /* Main.storyboard */; };
+		8C57A57525B3E33700615843 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C57A57425B3E33700615843 /* Assets.xcassets */; };
+		8C57A57825B3E33700615843 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C57A57625B3E33700615843 /* LaunchScreen.storyboard */; };
+		8C57A58325B3E33700615843 /* AgentBlackAndWhiteAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C57A58225B3E33700615843 /* AgentBlackAndWhiteAppTests.swift */; };
+		8C57A58E25B3E33700615843 /* AgentBlackAndWhiteAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C57A58D25B3E33700615843 /* AgentBlackAndWhiteAppUITests.swift */; };
+		8C57A59C25B3E4C800615843 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8C57A59B25B3E4C700615843 /* GoogleService-Info.plist */; };
+		8CA45ADB25B3EF22009846FD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA45ADA25B3EF22009846FD /* LoginViewController.swift */; };
+		8CA45ADD25B3EF40009846FD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA45ADC25B3EF40009846FD /* HomeViewController.swift */; };
+		8CA45ADF25B3EF73009846FD /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA45ADE25B3EF73009846FD /* RecordViewController.swift */; };
+		8CA45AE125B3EFD4009846FD /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA45AE025B3EFD4009846FD /* ResultViewController.swift */; };
+		8D8003ACFCD3271722EE498C /* Pods_AgentBlackAndWhiteAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C539CFBDC91EA554112CB3F3 /* Pods_AgentBlackAndWhiteAppTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8C57A57F25B3E33700615843 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C57A56025B3E33500615843 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C57A56725B3E33500615843;
+			remoteInfo = AgentBlackAndWhiteApp;
+		};
+		8C57A58A25B3E33700615843 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C57A56025B3E33500615843 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C57A56725B3E33500615843;
+			remoteInfo = AgentBlackAndWhiteApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0EB6B38C33FD2D6CDA90482D /* Pods-AgentBlackAndWhiteAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgentBlackAndWhiteAppTests.release.xcconfig"; path = "Target Support Files/Pods-AgentBlackAndWhiteAppTests/Pods-AgentBlackAndWhiteAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		2063A25547215B83B1CF3762 /* Pods_AgentBlackAndWhiteApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AgentBlackAndWhiteApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A9A7BA16618B15D06C65963 /* Pods-AgentBlackAndWhiteApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgentBlackAndWhiteApp.release.xcconfig"; path = "Target Support Files/Pods-AgentBlackAndWhiteApp/Pods-AgentBlackAndWhiteApp.release.xcconfig"; sourceTree = "<group>"; };
+		67814CDD40B52F41981215E7 /* Pods-AgentBlackAndWhiteAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgentBlackAndWhiteAppTests.debug.xcconfig"; path = "Target Support Files/Pods-AgentBlackAndWhiteAppTests/Pods-AgentBlackAndWhiteAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		894487097A04A7026EA7FA73 /* Pods-AgentBlackAndWhiteApp-AgentBlackAndWhiteAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgentBlackAndWhiteApp-AgentBlackAndWhiteAppUITests.release.xcconfig"; path = "Target Support Files/Pods-AgentBlackAndWhiteApp-AgentBlackAndWhiteAppUITests/Pods-AgentBlackAndWhiteApp-AgentBlackAndWhiteAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8C535B2725B3F230003E2C3D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		8C535B2925B3F2D3003E2C3D /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
+		8C57A56825B3E33500615843 /* AgentBlackAndWhiteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgentBlackAndWhiteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C57A56B25B3E33500615843 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8C57A56D25B3E33500615843 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		8C57A57225B3E33500615843 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8C57A57425B3E33700615843 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8C57A57725B3E33700615843 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8C57A57925B3E33700615843 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C57A57E25B3E33700615843 /* AgentBlackAndWhiteAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgentBlackAndWhiteAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C57A58225B3E33700615843 /* AgentBlackAndWhiteAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentBlackAndWhiteAppTests.swift; sourceTree = "<group>"; };
+		8C57A58425B3E33700615843 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C57A58925B3E33700615843 /* AgentBlackAndWhiteAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgentBlackAndWhiteAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C57A58D25B3E33700615843 /* AgentBlackAndWhiteAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentBlackAndWhiteAppUITests.swift; sourceTree = "<group>"; };
+		8C57A58F25B3E33700615843 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C57A59B25B3E4C700615843 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8CA45ADA25B3EF22009846FD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8CA45ADC25B3EF40009846FD /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8CA45ADE25B3EF73009846FD /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
+		8CA45AE025B3EFD4009846FD /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		986AE702060481577242213D /* Pods-AgentBlackAndWhiteApp-AgentBlackAndWhiteAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgentBlackAndWhiteApp-AgentBlackAndWhiteAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-AgentBlackAndWhiteApp-AgentBlackAndWhiteAppUITests/Pods-AgentBlackAndWhiteApp-AgentBlackAndWhiteAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B44E0D119F714CC0C01CE6DA /* Pods_AgentBlackAndWhiteApp_AgentBlackAndWhiteAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AgentBlackAndWhiteApp_AgentBlackAndWhiteAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C37D60CC63C000E53625EA6A /* Pods-AgentBlackAndWhiteApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgentBlackAndWhiteApp.debug.xcconfig"; path = "Target Support Files/Pods-AgentBlackAndWhiteApp/Pods-AgentBlackAndWhiteApp.debug.xcconfig"; sourceTree = "<group>"; };
+		C539CFBDC91EA554112CB3F3 /* Pods_AgentBlackAndWhiteAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AgentBlackAndWhiteAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8C57A56525B3E33500615843 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15D39AA9A7E560638E51EB1D /* Pods_AgentBlackAndWhiteApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C57A57B25B3E33700615843 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D8003ACFCD3271722EE498C /* Pods_AgentBlackAndWhiteAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C57A58625B3E33700615843 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AFFECB6D3A96B4F2DE48CB4 /* Pods_AgentBlackAndWhiteApp_AgentBlackAndWhiteAppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8C57A55F25B3E33500615843 = {
+			isa = PBXGroup;
+			children = (
+				8C57A56A25B3E33500615843 /* AgentBlackAndWhiteApp */,
+				8C57A58125B3E33700615843 /* AgentBlackAndWhiteAppTests */,
+				8C57A58C25B3E33700615843 /* AgentBlackAndWhiteAppUITests */,
+				8C57A56925B3E33500615843 /* Products */,
+				A808E6F77B1C2382065F0A3E /* Pods */,
+				C736591E97F67B472850D1B1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8C57A56925B3E33500615843 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8C57A56825B3E33500615843 /* AgentBlackAndWhiteApp.app */,
+				8C57A57E25B3E33700615843 /* AgentBlackAndWhiteAppTests.xctest */,
+				8C57A58925B3E33700615843 /* AgentBlackAndWhiteAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8C57A56A25B3E33500615843 /* AgentBlackAndWhiteApp */ = {
+			isa = PBXGroup;
+			children = (
+				8CA45AD725B3E873009846FD /* Model */,
+				8CA45AD825B3E888009846FD /* View */,
+				8CA45AD925B3E893009846FD /* Controller */,
+				8C57A57925B3E33700615843 /* Info.plist */,
+				8C57A59B25B3E4C700615843 /* GoogleService-Info.plist */,
+			);
+			path = AgentBlackAndWhiteApp;
+			sourceTree = "<group>";
+		};
+		8C57A58125B3E33700615843 /* AgentBlackAndWhiteAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				8C57A58225B3E33700615843 /* AgentBlackAndWhiteAppTests.swift */,
+				8C57A58425B3E33700615843 /* Info.plist */,
+			);
+			path = AgentBlackAndWhiteAppTests;
+			sourceTree = "<group>";
+		};
+		8C57A58C25B3E33700615843 /* AgentBlackAndWhiteAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8C57A58D25B3E33700615843 /* AgentBlackAndWhiteAppUITests.swift */,
+				8C57A58F25B3E33700615843 /* Info.plist */,
+			);
+			path = AgentBlackAndWhiteAppUITests;
+			sourceTree = "<group>";
+		};
+		8CA45AD725B3E873009846FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8C57A56B25B3E33500615843 /* AppDelegate.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8CA45AD825B3E888009846FD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8C57A57125B3E33500615843 /* Main.storyboard */,
+				8C57A57625B3E33700615843 /* LaunchScreen.storyboard */,
+				8C57A57425B3E33700615843 /* Assets.xcassets */,
+				8C57A56D25B3E33500615843 /* art.scnassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8CA45AD925B3E893009846FD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8CA45ADA25B3EF22009846FD /* LoginViewController.swift */,
+				8CA45ADC25B3EF40009846FD /* HomeViewController.swift */,
+				8CA45ADE25B3EF73009846FD /* RecordViewController.swift */,
+				8CA45AE025B3EFD4009846FD /* ResultViewController.swift */,
+				8C535B2725B3F230003E2C3D /* GameViewController.swift */,
+				8C535B2925B3F2D3003E2C3D /* RoomViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A808E6F77B1C2382065F0A3E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C37D60CC63C000E53625EA6A /* Pods-AgentBlackAndWhiteApp.debug.xcconfig */,
+				4A9A7BA16618B15D06C65963 /* Pods-AgentBlackAndWhiteApp.release.xcconfig */,
+				986AE702060481577242213D /* Pods-AgentBlackAndWhiteApp-AgentBlackAndWhiteAppUITests.debug.xcconfig */,
+				894487097A04A7026EA7FA73 /* Pods-AgentBlackAndWhiteApp-AgentBlackAndWhiteAppUITests.release.xcconfig */,
+				67814CDD40B52F41981215E7 /* Pods-AgentBlackAndWhiteAppTests.debug.xcconfig */,
+				0EB6B38C33FD2D6CDA90482D /* Pods-AgentBlackAndWhiteAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C736591E97F67B472850D1B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2063A25547215B83B1CF3762 /* Pods_AgentBlackAndWhiteApp.framework */,
+				B44E0D119F714CC0C01CE6DA /* Pods_AgentBlackAndWhiteApp_AgentBlackAndWhiteAppUITests.framework */,
+				C539CFBDC91EA554112CB3F3 /* Pods_AgentBlackAndWhiteAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8C57A56725B3E33500615843 /* AgentBlackAndWhiteApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C57A59225B3E33700615843 /* Build configuration list for PBXNativeTarget "AgentBlackAndWhiteApp" */;
+			buildPhases = (
+				41AC097758D6CB0B16D1E187 /* [CP] Check Pods Manifest.lock */,
+				8C57A56425B3E33500615843 /* Sources */,
+				8C57A56525B3E33500615843 /* Frameworks */,
+				8C57A56625B3E33500615843 /* Resources */,
+				0DC9BB7B9E173C2AB30165B5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AgentBlackAndWhiteApp;
+			productName = AgentBlackAndWhiteApp;
+			productReference = 8C57A56825B3E33500615843 /* AgentBlackAndWhiteApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8C57A57D25B3E33700615843 /* AgentBlackAndWhiteAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C57A59525B3E33700615843 /* Build configuration list for PBXNativeTarget "AgentBlackAndWhiteAppTests" */;
+			buildPhases = (
+				7625B4000E0389CA3D14AAB2 /* [CP] Check Pods Manifest.lock */,
+				8C57A57A25B3E33700615843 /* Sources */,
+				8C57A57B25B3E33700615843 /* Frameworks */,
+				8C57A57C25B3E33700615843 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C57A58025B3E33700615843 /* PBXTargetDependency */,
+			);
+			name = AgentBlackAndWhiteAppTests;
+			productName = AgentBlackAndWhiteAppTests;
+			productReference = 8C57A57E25B3E33700615843 /* AgentBlackAndWhiteAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8C57A58825B3E33700615843 /* AgentBlackAndWhiteAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C57A59825B3E33700615843 /* Build configuration list for PBXNativeTarget "AgentBlackAndWhiteAppUITests" */;
+			buildPhases = (
+				F02FF9EE51C5232199A8BF5A /* [CP] Check Pods Manifest.lock */,
+				8C57A58525B3E33700615843 /* Sources */,
+				8C57A58625B3E33700615843 /* Frameworks */,
+				8C57A58725B3E33700615843 /* Resources */,
+				57AF26F0DCC6878C432559D2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C57A58B25B3E33700615843 /* PBXTargetDependency */,
+			);
+			name = AgentBlackAndWhiteAppUITests;
+			productName = AgentBlackAndWhiteAppUITests;
+			productReference = 8C57A58925B3E33700615843 /* AgentBlackAndWhiteAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8C57A56025B3E33500615843 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1170;
+				LastUpgradeCheck = 1170;
+				ORGANIZATIONNAME = "尾原徳泰";
+				TargetAttributes = {
+					8C57A56725B3E33500615843 = {
+						CreatedOnToolsVersion = 11.7;
+					};
+					8C57A57D25B3E33700615843 = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 8C57A56725B3E33500615843;
+					};
+					8C57A58825B3E33700615843 = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 8C57A56725B3E33500615843;
+					};
+				};
+			};
+			buildConfigurationList = 8C57A56325B3E33500615843 /* Build configuration list for PBXProject "AgentBlackAndWhiteApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8C57A55F25B3E33500615843;
+			productRefGroup = 8C57A56925B3E33500615843 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8C57A56725B3E33500615843 /* AgentBlackAndWhiteApp */,
+				8C57A57D25B3E33700615843 /* AgentBlackAndWhiteAppTests */,
+				8C57A58825B3E33700615843 /* AgentBlackAndWhiteAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8C57A56625B3E33500615843 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C57A59C25B3E4C800615843 /* GoogleService-Info.plist in Resources */,
+				8C57A56E25B3E33500615843 /* art.scnassets in Resources */,
+				8C57A57825B3E33700615843 /* LaunchScreen.storyboard in Resources */,
+				8C57A57525B3E33700615843 /* Assets.xcassets in Resources */,
+				8C57A57325B3E33500615843 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C57A57C25B3E33700615843 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C57A58725B3E33700615843 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0DC9BB7B9E173C2AB30165B5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AgentBlackAndWhiteApp/Pods-AgentBlackAndWhiteApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AgentBlackAndWhiteApp/Pods-AgentBlackAndWhiteApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AgentBlackAndWhiteApp/Pods-AgentBlackAndWhiteApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41AC097758D6CB0B16D1E187 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AgentBlackAndWhiteApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57AF26F0DCC6878C432559D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AgentBlackAndWhiteApp-AgentBlackAndWhiteAppUITests/Pods-AgentBlackAndWhiteApp-AgentBlackAndWhiteAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AgentBlackAndWhiteApp-AgentBlackAndWhiteAppUITests/Pods-AgentBlackAndWhiteApp-AgentBlackAndWhiteAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AgentBlackAndWhiteApp-AgentBlackAndWhiteAppUITests/Pods-AgentBlackAndWhiteApp-AgentBlackAndWhiteAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7625B4000E0389CA3D14AAB2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AgentBlackAndWhiteAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F02FF9EE51C5232199A8BF5A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AgentBlackAndWhiteApp-AgentBlackAndWhiteAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8C57A56425B3E33500615843 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C535B2825B3F230003E2C3D /* GameViewController.swift in Sources */,
+				8CA45ADB25B3EF22009846FD /* LoginViewController.swift in Sources */,
+				8C535B2A25B3F2D3003E2C3D /* RoomViewController.swift in Sources */,
+				8CA45ADF25B3EF73009846FD /* RecordViewController.swift in Sources */,
+				8C57A56C25B3E33500615843 /* AppDelegate.swift in Sources */,
+				8CA45ADD25B3EF40009846FD /* HomeViewController.swift in Sources */,
+				8CA45AE125B3EFD4009846FD /* ResultViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C57A57A25B3E33700615843 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C57A58325B3E33700615843 /* AgentBlackAndWhiteAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C57A58525B3E33700615843 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C57A58E25B3E33700615843 /* AgentBlackAndWhiteAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8C57A58025B3E33700615843 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C57A56725B3E33500615843 /* AgentBlackAndWhiteApp */;
+			targetProxy = 8C57A57F25B3E33700615843 /* PBXContainerItemProxy */;
+		};
+		8C57A58B25B3E33700615843 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C57A56725B3E33500615843 /* AgentBlackAndWhiteApp */;
+			targetProxy = 8C57A58A25B3E33700615843 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8C57A57125B3E33500615843 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C57A57225B3E33500615843 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8C57A57625B3E33700615843 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8C57A57725B3E33700615843 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8C57A59025B3E33700615843 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8C57A59125B3E33700615843 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8C57A59325B3E33700615843 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C37D60CC63C000E53625EA6A /* Pods-AgentBlackAndWhiteApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4VA5NBL27P;
+				INFOPLIST_FILE = AgentBlackAndWhiteApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.tukareta.nori.AgentBlackAndWhiteApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		8C57A59425B3E33700615843 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A9A7BA16618B15D06C65963 /* Pods-AgentBlackAndWhiteApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4VA5NBL27P;
+				INFOPLIST_FILE = AgentBlackAndWhiteApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.tukareta.nori.AgentBlackAndWhiteApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		8C57A59625B3E33700615843 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67814CDD40B52F41981215E7 /* Pods-AgentBlackAndWhiteAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4VA5NBL27P;
+				INFOPLIST_FILE = AgentBlackAndWhiteAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.tukareta.nori.AgentBlackAndWhiteAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AgentBlackAndWhiteApp.app/AgentBlackAndWhiteApp";
+			};
+			name = Debug;
+		};
+		8C57A59725B3E33700615843 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EB6B38C33FD2D6CDA90482D /* Pods-AgentBlackAndWhiteAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4VA5NBL27P;
+				INFOPLIST_FILE = AgentBlackAndWhiteAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.tukareta.nori.AgentBlackAndWhiteAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AgentBlackAndWhiteApp.app/AgentBlackAndWhiteApp";
+			};
+			name = Release;
+		};
+		8C57A59925B3E33700615843 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 986AE702060481577242213D /* Pods-AgentBlackAndWhiteApp-AgentBlackAndWhiteAppUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4VA5NBL27P;
+				INFOPLIST_FILE = AgentBlackAndWhiteAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.tukareta.nori.AgentBlackAndWhiteAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AgentBlackAndWhiteApp;
+			};
+			name = Debug;
+		};
+		8C57A59A25B3E33700615843 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 894487097A04A7026EA7FA73 /* Pods-AgentBlackAndWhiteApp-AgentBlackAndWhiteAppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4VA5NBL27P;
+				INFOPLIST_FILE = AgentBlackAndWhiteAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.tukareta.nori.AgentBlackAndWhiteAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AgentBlackAndWhiteApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8C57A56325B3E33500615843 /* Build configuration list for PBXProject "AgentBlackAndWhiteApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C57A59025B3E33700615843 /* Debug */,
+				8C57A59125B3E33700615843 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C57A59225B3E33700615843 /* Build configuration list for PBXNativeTarget "AgentBlackAndWhiteApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C57A59325B3E33700615843 /* Debug */,
+				8C57A59425B3E33700615843 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C57A59525B3E33700615843 /* Build configuration list for PBXNativeTarget "AgentBlackAndWhiteAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C57A59625B3E33700615843 /* Debug */,
+				8C57A59725B3E33700615843 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C57A59825B3E33700615843 /* Build configuration list for PBXNativeTarget "AgentBlackAndWhiteAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C57A59925B3E33700615843 /* Debug */,
+				8C57A59A25B3E33700615843 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8C57A56025B3E33500615843 /* Project object */;
+}

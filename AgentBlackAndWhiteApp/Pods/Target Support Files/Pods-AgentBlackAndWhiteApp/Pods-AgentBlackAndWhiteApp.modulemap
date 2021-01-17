@@ -1,0 +1,6 @@
+framework module Pods_AgentBlackAndWhiteApp {
+  umbrella header "Pods-AgentBlackAndWhiteApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_AgentBlackAndWhiteApp_AgentBlackAndWhiteAppUITests : NSObject
+@end
+@implementation PodsDummy_Pods_AgentBlackAndWhiteApp_AgentBlackAndWhiteAppUITests
+@end
