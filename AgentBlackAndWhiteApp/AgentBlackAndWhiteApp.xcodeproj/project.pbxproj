@@ -11,6 +11,8 @@
 		2AFFECB6D3A96B4F2DE48CB4 /* Pods_AgentBlackAndWhiteApp_AgentBlackAndWhiteAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B44E0D119F714CC0C01CE6DA /* Pods_AgentBlackAndWhiteApp_AgentBlackAndWhiteAppUITests.framework */; };
 		8C535B2825B3F230003E2C3D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C535B2725B3F230003E2C3D /* GameViewController.swift */; };
 		8C535B2A25B3F2D3003E2C3D /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C535B2925B3F2D3003E2C3D /* RoomViewController.swift */; };
+		8C535B3025B408E0003E2C3D /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C535B2F25B408E0003E2C3D /* GameView.swift */; };
+		8C535B3225B4090C003E2C3D /* GameSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C535B3125B4090C003E2C3D /* GameSystem.swift */; };
 		8C57A56C25B3E33500615843 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C57A56B25B3E33500615843 /* AppDelegate.swift */; };
 		8C57A56E25B3E33500615843 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C57A56D25B3E33500615843 /* art.scnassets */; };
 		8C57A57325B3E33500615843 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C57A57125B3E33500615843 /* Main.storyboard */; };
@@ -51,6 +53,8 @@
 		894487097A04A7026EA7FA73 /* Pods-AgentBlackAndWhiteApp-AgentBlackAndWhiteAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AgentBlackAndWhiteApp-AgentBlackAndWhiteAppUITests.release.xcconfig"; path = "Target Support Files/Pods-AgentBlackAndWhiteApp-AgentBlackAndWhiteAppUITests/Pods-AgentBlackAndWhiteApp-AgentBlackAndWhiteAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8C535B2725B3F230003E2C3D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		8C535B2925B3F2D3003E2C3D /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
+		8C535B2F25B408E0003E2C3D /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		8C535B3125B4090C003E2C3D /* GameSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSystem.swift; sourceTree = "<group>"; };
 		8C57A56825B3E33500615843 /* AgentBlackAndWhiteApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AgentBlackAndWhiteApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C57A56B25B3E33500615843 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C57A56D25B3E33500615843 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -159,6 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				8C57A56B25B3E33500615843 /* AppDelegate.swift */,
+				8C535B2F25B408E0003E2C3D /* GameView.swift */,
+				8C535B3125B4090C003E2C3D /* GameSystem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -452,11 +458,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C535B2825B3F230003E2C3D /* GameViewController.swift in Sources */,
+				8C535B3225B4090C003E2C3D /* GameSystem.swift in Sources */,
 				8CA45ADB25B3EF22009846FD /* LoginViewController.swift in Sources */,
 				8C535B2A25B3F2D3003E2C3D /* RoomViewController.swift in Sources */,
 				8CA45ADF25B3EF73009846FD /* RecordViewController.swift in Sources */,
 				8C57A56C25B3E33500615843 /* AppDelegate.swift in Sources */,
 				8CA45ADD25B3EF40009846FD /* HomeViewController.swift in Sources */,
+				8C535B3025B408E0003E2C3D /* GameView.swift in Sources */,
 				8CA45AE125B3EFD4009846FD /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
