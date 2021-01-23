@@ -76,5 +76,16 @@ struct Pawn {
         default:
             print("Make Pawn Error")
         }
+        
+        // 新しいオブジェクトの座標を規定
+        let newFieldPoint = SCNVector3(x: newStagePointX!, y: newStagePointY!, z: newStagePointZ!)
+        
+        // ノードの大きさ変更
+        pawnNode!.scale = SCNVector3(x: 0.02, y: 0.02, z: 0.02)
+        // ノードの作成
+        targetSceneView.scene.rootNode.addChildNode(pawnNode!)
+        
+        return pawnNode!
+        
     }
 }
