@@ -15,6 +15,11 @@
 		8C56388F25BAE49300449063 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C56388D25BAE49300449063 /* LaunchScreen.storyboard */; };
 		8C56389A25BAE49400449063 /* NewGameSampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C56389925BAE49400449063 /* NewGameSampleAppTests.swift */; };
 		8C5638A525BAE49400449063 /* NewGameSampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5638A425BAE49400449063 /* NewGameSampleAppUITests.swift */; };
+		8C5638B425BB08D200449063 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5638B325BB08D200449063 /* PlayerModel.swift */; };
+		8C5638B625BB0AC700449063 /* SaveColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5638B525BB0AC700449063 /* SaveColorModel.swift */; };
+		8C5638B825BB0EF800449063 /* MakeFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5638B725BB0EF800449063 /* MakeFieldModel.swift */; };
+		8C5638BA25BBC37300449063 /* SetARModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5638B925BBC37300449063 /* SetARModel.swift */; };
+		8C5638BC25BBCA7B00449063 /* MakePawnModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5638BB25BBCA7B00449063 /* MakePawnModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		8C5638A025BAE49400449063 /* NewGameSampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewGameSampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C5638A425BAE49400449063 /* NewGameSampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGameSampleAppUITests.swift; sourceTree = "<group>"; };
 		8C5638A625BAE49400449063 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C5638B325BB08D200449063 /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
+		8C5638B525BB0AC700449063 /* SaveColorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveColorModel.swift; sourceTree = "<group>"; };
+		8C5638B725BB0EF800449063 /* MakeFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeFieldModel.swift; sourceTree = "<group>"; };
+		8C5638B925BBC37300449063 /* SetARModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetARModel.swift; sourceTree = "<group>"; };
+		8C5638BB25BBCA7B00449063 /* MakePawnModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakePawnModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +109,7 @@
 		8C56388125BAE49100449063 /* NewGameSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				8C5638B225BB089C00449063 /* Model */,
 				8C56388225BAE49100449063 /* AppDelegate.swift */,
 				8C56388425BAE49100449063 /* art.scnassets */,
 				8C56388625BAE49100449063 /* ViewController.swift */,
@@ -126,6 +137,18 @@
 				8C5638A625BAE49400449063 /* Info.plist */,
 			);
 			path = NewGameSampleAppUITests;
+			sourceTree = "<group>";
+		};
+		8C5638B225BB089C00449063 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8C5638B325BB08D200449063 /* PlayerModel.swift */,
+				8C5638B525BB0AC700449063 /* SaveColorModel.swift */,
+				8C5638B725BB0EF800449063 /* MakeFieldModel.swift */,
+				8C5638B925BBC37300449063 /* SetARModel.swift */,
+				8C5638BB25BBCA7B00449063 /* MakePawnModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +283,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C5638BC25BBCA7B00449063 /* MakePawnModel.swift in Sources */,
+				8C5638B825BB0EF800449063 /* MakeFieldModel.swift in Sources */,
+				8C5638B625BB0AC700449063 /* SaveColorModel.swift in Sources */,
+				8C5638B425BB08D200449063 /* PlayerModel.swift in Sources */,
+				8C5638BA25BBC37300449063 /* SetARModel.swift in Sources */,
 				8C56388725BAE49100449063 /* ViewController.swift in Sources */,
 				8C56388325BAE49100449063 /* AppDelegate.swift in Sources */,
 			);

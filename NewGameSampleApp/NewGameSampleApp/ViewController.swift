@@ -14,6 +14,28 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
     
+    @IBOutlet weak var oneButton: UIButton!
+    @IBOutlet weak var twoButton: UIButton!
+    @IBOutlet weak var threeButton: UIButton!
+    @IBOutlet weak var fourButton: UIButton!
+    @IBOutlet weak var fiveButton: UIButton!
+    @IBOutlet weak var sixButton: UIButton!
+    @IBOutlet weak var sevenButton: UIButton!
+    @IBOutlet weak var eightButton: UIButton!
+    @IBOutlet weak var nineButton: UIButton!
+    @IBOutlet weak var tenButton: UIButton!
+    @IBOutlet weak var elevenButton: UIButton!
+    @IBOutlet weak var twelveButton: UIButton!
+    @IBOutlet weak var thirteenButton: UIButton!
+    @IBOutlet weak var fourteenButton: UIButton!
+    @IBOutlet weak var fifteenButton: UIButton!
+    @IBOutlet weak var sixteenButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var normalAgentButton: UIButton!
+    @IBOutlet weak var normalAgentLabel: UILabel!
+    @IBOutlet weak var glayAgentButton: UIButton!
+    @IBOutlet weak var glayAgentLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,7 +51,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Set the scene to the view
         sceneView.scene = scene
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -71,5 +92,48 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     func sessionInterruptionEnded(_ session: ARSession) {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
         
+    }
+    
+    @IBAction func oneButtonPressed(_ sender: Any) {
+    }
+    @IBAction func twoButtonPressed(_ sender: Any) {
+    }
+    @IBAction func threeButtonPressed(_ sender: Any) {
+    }
+    
+    @IBAction func fourButtonPressed(_ sender: Any) {
+    }
+    @IBAction func fiveButtonPressed(_ sender: Any) {
+    }
+    @IBAction func sixButtonPressed(_ sender: Any) {
+    }
+    @IBAction func sevenButtonPressed(_ sender: Any) {
+    }
+    
+    @IBAction func eightButtonPressed(_ sender: Any) {
+    }
+    @IBAction func nineButtonPressed(_ sender: Any) {
+    }
+    @IBAction func tenButtonPressed(_ sender: Any) {
+    }
+    @IBAction func elevenButtonPressed(_ sender: Any) {
+    }
+    @IBAction func tewlveButtonPressed(_ sender: Any) {
+    }
+    
+    @IBAction func thirteenButtonPressed(_ sender: Any) {
+    }
+    @IBAction func fourteenButtonPressed(_ sender: Any) {
+    }
+    @IBAction func fifteenButtonPressed(_ sender: Any) {
+    }
+    @IBAction func sixteenButtonPressed(_ sender: Any) {
+    }
+    @IBAction func nextButtonPressed(_ sender: Any) {
+    }
+    @IBAction func normalAgentButtonPressed(_ sender: Any) {
+    }
+    
+    @IBAction func glaynormalAgentButtonPressed(_ sender: Any) {
     }
 }
