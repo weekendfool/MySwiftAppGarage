@@ -20,6 +20,7 @@
 		8C5638B825BB0EF800449063 /* MakeFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5638B725BB0EF800449063 /* MakeFieldModel.swift */; };
 		8C5638BA25BBC37300449063 /* SetARModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5638B925BBC37300449063 /* SetARModel.swift */; };
 		8C5638BC25BBCA7B00449063 /* MakePawnModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5638BB25BBCA7B00449063 /* MakePawnModel.swift */; };
+		8C5638BE25BC709D00449063 /* DeleteARModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5638BD25BC709D00449063 /* DeleteARModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		8C5638B725BB0EF800449063 /* MakeFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeFieldModel.swift; sourceTree = "<group>"; };
 		8C5638B925BBC37300449063 /* SetARModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetARModel.swift; sourceTree = "<group>"; };
 		8C5638BB25BBCA7B00449063 /* MakePawnModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakePawnModel.swift; sourceTree = "<group>"; };
+		8C5638BD25BC709D00449063 /* DeleteARModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteARModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				8C5638B725BB0EF800449063 /* MakeFieldModel.swift */,
 				8C5638B925BBC37300449063 /* SetARModel.swift */,
 				8C5638BB25BBCA7B00449063 /* MakePawnModel.swift */,
+				8C5638BD25BC709D00449063 /* DeleteARModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				8C5638B625BB0AC700449063 /* SaveColorModel.swift in Sources */,
 				8C5638B425BB08D200449063 /* PlayerModel.swift in Sources */,
 				8C5638BA25BBC37300449063 /* SetARModel.swift in Sources */,
+				8C5638BE25BC709D00449063 /* DeleteARModel.swift in Sources */,
 				8C56388725BAE49100449063 /* ViewController.swift in Sources */,
 				8C56388325BAE49100449063 /* AppDelegate.swift in Sources */,
 			);
