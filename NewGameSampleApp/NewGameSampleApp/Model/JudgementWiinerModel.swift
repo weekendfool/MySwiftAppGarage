@@ -10,7 +10,7 @@ import Foundation
 
 struct JudmentWiner {
     
-    func judgmentWiner(aftercolorDic: [Int: Int]) -> Int {
+    func judgmentWiner(afterColorDic: [Int: Int]) -> Int {
         
         //返り値用の変数
         var winerPlayerNumber = 0
@@ -55,7 +55,7 @@ struct JudmentWiner {
             var judgmentBlueNumber = 0
             for placeNumvers in winerPatternDic[key]! {
                 // 赤か青かの判定を行い、該当した色にプラス１する
-                switch aftercolorDic[placeNumvers] {
+                switch afterColorDic[placeNumvers] {
                 case 1:
                     judgmentRedNumber += 1
                 case 2:
@@ -81,7 +81,8 @@ struct JudmentWiner {
             winerPlayerNumber = 3
         }
         
-    return winerPlayerNumber
+        return winerPlayerNumber
     }
+    
     
 }

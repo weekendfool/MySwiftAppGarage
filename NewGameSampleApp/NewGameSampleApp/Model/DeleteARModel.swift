@@ -15,7 +15,7 @@ struct DeleteAR {
     func deleteAR(nodeArray: [SCNNode]) {
         
         //　nodeArrayが空でない場合削除
-        guard nodeArray.count == 0 else {
+        if nodeArray.count != 0 {
             for node in nodeArray {
                 node.removeFromParentNode()
             }
