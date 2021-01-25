@@ -30,4 +30,12 @@ struct SaveColor {
         }
     }
     
+    // 辞書の更新処理
+    mutating func updateDic(inputDic: [Int: Int]) {
+        
+        for num in 1...16 {
+            colorDic[num] = inputDic[num]
+        }
+    }
+    
 }
