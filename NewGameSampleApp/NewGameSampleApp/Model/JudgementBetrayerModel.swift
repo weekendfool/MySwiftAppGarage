@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 
 struct JudgementBetrayer {
@@ -36,4 +37,26 @@ struct JudgementBetrayer {
         
         return  afterColorDic!
     }
+    
+    // 裏切り者が使用された時にポップアップさせる処理
+    func popUp() -> UIAlertController {
+        // アラートの様式の設定
+        let alertController:UIAlertController = UIAlertController(title: "相手に渡してください", message: "裏切らせますか？", preferredStyle: .alert)
+        
+        // アラートのアクションの設定
+        let alertAction: UIAlertAction = UIAlertAction(title: "Yes", style: .destructive) { (action: UIAlertAction!) -> Void in
+            print("yes")
+        }
+        
+        let alertCancelAction: UIAlertAction = UIAlertAction(title: "No", style: .cancel) { (action: UIAlertAction!) -> Void in
+            print("no")
+        }
+        
+        // アクションの追加
+        alertController.addAction(alertAction)
+        alertController.addAction(alertCancelAction)
+        
+        return alertController
+    }
+    
 }
