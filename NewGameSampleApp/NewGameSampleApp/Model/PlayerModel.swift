@@ -10,20 +10,20 @@ import Foundation
 
 struct Player {
     
-    func makePlayer(count: Int) -> (String, Int) {
+    func makePlayer(count: Int) -> (Int) {
         // 返り値を格納する変数
-        var playerName: String
+//        var playerName: String
         var playerColor: Int
         
         // countの奇数偶数で１pと２pの場合わけ
         if count % 2 == 1 {
-            playerName = "Blue"
+//            playerName = "Blue"
             playerColor = 1
         } else {
-            playerName = "Red"
+//            playerName = "Red"
             playerColor = 2
         }
         
-        return (playerName, playerColor)
+        return playerColor
     }
 }

@@ -185,6 +185,14 @@
                                     <action selector="sixButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="nov-S9-fHa"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mE-sW-rhS">
+                                <rect key="frame" x="20" y="513" width="374" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="startButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="ibw-hI-Vwp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -213,6 +221,7 @@
                         <outlet property="sevenButton" destination="Wa3-MR-Rum" id="C5j-6z-8Cc"/>
                         <outlet property="sixButton" destination="gaz-I9-PAN" id="oib-y7-Web"/>
                         <outlet property="sixteenButton" destination="Asp-O0-Fls" id="c7d-DW-OUb"/>
+                        <outlet property="startButton" destination="4mE-sW-rhS" id="IqE-JS-nUM"/>
                         <outlet property="tenButton" destination="93y-B3-qvK" id="hUP-wj-IOb"/>
                         <outlet property="thirteenButton" destination="ERs-ru-V0a" id="C2b-iB-dSg"/>
                         <outlet property="threeButton" destination="8ca-1T-wZ5" id="EWS-qM-Wsq"/>

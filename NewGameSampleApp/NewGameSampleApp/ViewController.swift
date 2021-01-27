@@ -36,63 +36,45 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var glayAgentButton: UIButton!
     @IBOutlet weak var glayAgentLabel: UILabel!
     
+    @IBOutlet weak var startButton: UIButton!
+    var count = 0
+    // 各インスタンスの作成
+    let player = Player()
+    let saveColor = SaveColor()
+    let makeField = MakeField()
+    let setAR = SetAR()
+    let makePawn = Pawn()
+    let deleteAR = DeleteAR()
+    let judmentWiner = JudmentWiner()
+    let judgementBetrayer = JudgementBetrayer()
+    let buttonProcessing = ButtonProcessing()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Set the view's delegate
-        sceneView.delegate = self
-        
-        // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
-        
-        // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
-        
-        // Set the scene to the view
-        sceneView.scene = scene
+        setAR.setAR(targetViewController: self, targetSceneView: sceneView)
+        startButton.isEnabled = true
+        startButton.isHidden = false
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        // Create a session configuration
-        let configuration = ARWorldTrackingConfiguration()
-
-        // Run the view's session
-        sceneView.session.run(configuration)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        // Pause the view's session
-        sceneView.session.pause()
-    }
-
+   
     // MARK: - ARSCNViewDelegate
     
-/*
-    // Override to create and configure nodes for anchors added to the view's session.
-    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-        let node = SCNNode()
-     
-        return node
-    }
-*/
-    
-    func session(_ session: ARSession, didFailWithError error: Error) {
-        // Present an error message to the user
+    @IBAction func startButtonPressed(_ sender: Any) {
+        // フィールドを展開する
+        makeField.makeField(targetSceneView: sceneView)
+        // ボタンを非表示
+        startButton.isEnabled = false
+        startButton.isHidden = true
         
+        count += 1
     }
     
-    func sessionWasInterrupted(_ session: ARSession) {
-        // Inform the user that the session has been interrupted, for example, by presenting an overlay
-        
+    // ボタンの動作を記述
+    func buttonAction(buttonNumber: Int, count: Int) {
+        // 
+        player.makePlayer(count: count)
     }
-    
-    func sessionInterruptionEnded(_ session: ARSession) {
-        // Reset tracking and/or remove existing anchors if consistent tracking is required
-        
-    }
+
     
     @IBAction func oneButtonPressed(_ sender: Any) {
     }
@@ -136,4 +118,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     @IBAction func glaynormalAgentButtonPressed(_ sender: Any) {
     }
+    
+   
 }

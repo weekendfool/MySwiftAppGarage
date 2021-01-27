@@ -11,7 +11,7 @@ import UIKit
 import SceneKit
 import ARKit
 
-struct SettingAR {
+struct SetAR {
     
     func setAR(targetViewController: UIViewController, targetSceneView: ARSCNView) {
         

@@ -23,6 +23,7 @@
 		8C5638BE25BC709D00449063 /* DeleteARModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5638BD25BC709D00449063 /* DeleteARModel.swift */; };
 		8C5638C025BC73ED00449063 /* JudgementWiinerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5638BF25BC73ED00449063 /* JudgementWiinerModel.swift */; };
 		8C5638C225BC762F00449063 /* JudgementBetrayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5638C125BC762F00449063 /* JudgementBetrayerModel.swift */; };
+		8C5750CB25C08A640030CD2A /* ButtonProcessingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5750CA25C08A640030CD2A /* ButtonProcessingModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		8C5638BD25BC709D00449063 /* DeleteARModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteARModel.swift; sourceTree = "<group>"; };
 		8C5638BF25BC73ED00449063 /* JudgementWiinerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JudgementWiinerModel.swift; sourceTree = "<group>"; };
 		8C5638C125BC762F00449063 /* JudgementBetrayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JudgementBetrayerModel.swift; sourceTree = "<group>"; };
+		8C5750CA25C08A640030CD2A /* ButtonProcessingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonProcessingModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 				8C5638BD25BC709D00449063 /* DeleteARModel.swift */,
 				8C5638BF25BC73ED00449063 /* JudgementWiinerModel.swift */,
 				8C5638C125BC762F00449063 /* JudgementBetrayerModel.swift */,
+				8C5750CA25C08A640030CD2A /* ButtonProcessingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 			files = (
 				8C5638BC25BBCA7B00449063 /* MakePawnModel.swift in Sources */,
 				8C5638B825BB0EF800449063 /* MakeFieldModel.swift in Sources */,
+				8C5750CB25C08A640030CD2A /* ButtonProcessingModel.swift in Sources */,
 				8C5638B625BB0AC700449063 /* SaveColorModel.swift in Sources */,
 				8C5638B425BB08D200449063 /* PlayerModel.swift in Sources */,
 				8C5638BA25BBC37300449063 /* SetARModel.swift in Sources */,

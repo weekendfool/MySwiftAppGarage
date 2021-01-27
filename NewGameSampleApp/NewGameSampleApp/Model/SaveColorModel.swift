@@ -14,13 +14,13 @@ struct SaveColor {
     var colorDic: [Int: Int] = [1:0, 2:0, 3:0, 4:0, 5:0, 6:0, 7:0, 8:0, 9:0, 10:0, 11:0, 12:0, 13:0, 14:0, 15:0, 16:0]
     
     // 色の記憶処理
-    mutating func SaveColor(inputColor: Int, placeNumber: Int) -> [Int: Int] {
+    mutating func saveColor(inputColor: Int, placeNumber: Int) {
         
         //入力された場所と数字を記録
         colorDic[placeNumber] = inputColor
         
-        // 辞書を返す
-        return colorDic
+//        // 辞書を返す
+//        return colorDic
     }
     
     // 辞書のリセット処理
