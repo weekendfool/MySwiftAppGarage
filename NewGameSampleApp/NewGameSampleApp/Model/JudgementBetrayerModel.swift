@@ -39,7 +39,7 @@ struct JudgementBetrayer {
     }
     
     // 裏切り者が使用された時にポップアップさせる処理
-    func popUp(saveColor: (Int, Int)) -> UIAlertController {
+    func popUp(saveColor: Void) -> UIAlertController {
         // アラートの様式の設定
         let alertController:UIAlertController = UIAlertController(title: "相手に渡してください", message: "裏切らせますか？", preferredStyle: .alert)
         

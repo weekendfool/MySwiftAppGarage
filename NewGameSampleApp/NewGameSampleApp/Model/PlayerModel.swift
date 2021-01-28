@@ -10,6 +10,8 @@ import Foundation
 
 struct Player {
     
+    var playersDic = ["AgentBKGY": 2, "AgentBKN": 6, "AgentWTGY": 2, "AgentWTN": 6]
+    
     func makePlayer(count: Int) -> (Int) {
         // 返り値を格納する変数
 //        var playerName: String
@@ -25,5 +27,46 @@ struct Player {
         }
         
         return playerColor
+    }
+    
+    mutating func playerInfo(playerColor: Int, selectAgent: Int) -> (Int, Int) {
+        var normalAgwntNumber: Int?
+        var betrayerAgentNumber: Int?
+        
+        switch playerColor {
+        case 1:
+            switch selectAgent {
+            case 0:
+                // ノーマルエージェントを選択
+                normalAgwntNumber = playersDic["AgentBKN"]!
+                betrayerAgentNumber = playersDic["AgentBKGY"]!
+            case 1:
+                // ノーマルエージェントを選択
+                normalAgwntNumber = playersDic["AgentBKN"]! - 1
+            case 2:
+                // 裏切り者を選択
+                betrayerAgentNumber = playersDic["AgentBKGY"]! - 1
+            default:
+                print("error")
+            }
+        case 2:
+            switch selectAgent {
+            case 0:
+                // ノーマルエージェントを選択
+                normalAgwntNumber = playersDic["AgentWTN"]!
+                betrayerAgentNumber = playersDic["AgentWTGY"]!
+            case 1:
+                normalAgwntNumber = playersDic["AgentWTN"]! - 1
+            case 2:
+                betrayerAgentNumber = playersDic["AgentWTGY"]! - 1
+            default:
+                print("error")
+        }
+        default:
+            print("error")
+        }
+        
+        
+        return (normalAgwntNumber!, betrayerAgentNumber!)
     }
 }

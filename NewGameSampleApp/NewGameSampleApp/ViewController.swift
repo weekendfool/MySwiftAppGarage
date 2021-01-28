@@ -37,10 +37,22 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var glayAgentLabel: UILabel!
     
     @IBOutlet weak var startButton: UIButton!
-    var count = 0
+    
+    var count = 0 {
+        didSet {
+            playerCount = beforeChoseAgentbutton(count: count)
+            normalAgentLabel.text = String(playerInfo.0)
+            glayAgentLabel.text = String(playerInfo.1)
+        }
+    }
+    var fieldPoint: SCNVector3?
+    var betrayerFlag: Bool?
+    var playerCount: Int?
+    var betrayerDic: [String: Int] = ["playerCount": 0, "buttonNumber": 0]
+    var playerInfo: (Int, Int)
     // 各インスタンスの作成
-    let player = Player()
-    let saveColor = SaveColor()
+    var player = Player()
+    var saveColor = SaveColor()
     let makeField = MakeField()
     let setAR = SetAR()
     let makePawn = Pawn()
@@ -55,13 +67,16 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         setAR.setAR(targetViewController: self, targetSceneView: sceneView)
         startButton.isEnabled = true
         startButton.isHidden = false
+        betrayerFlag = false
+        playerInfo = player.playerInfo(playerColor: playerCount!, selectAgent: 0)
+        
     }
    
     // MARK: - ARSCNViewDelegate
     
     @IBAction func startButtonPressed(_ sender: Any) {
         // フィールドを展開する
-        makeField.makeField(targetSceneView: sceneView)
+        fieldPoint = makeField.makeField(targetSceneView: sceneView)
         // ボタンを非表示
         startButton.isEnabled = false
         startButton.isHidden = true
@@ -70,53 +85,124 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     // ボタンの動作を記述
-    func buttonAction(buttonNumber: Int, count: Int) {
-        // 
-        player.makePlayer(count: count)
+    func numberButtonAction(buttonNumber: Int, count: Int) {
+        
+        // ポーンの作成
+        makePawn.makePawn(playerColor: playerCount!, fieldNumber: buttonNumber, fieldPoint: fieldPoint!, targetSceneView: sceneView)
+        //　色の保存
+        saveColor.saveColor(inputColor: playerCount!, placeNumber: buttonNumber)
+        // 裏切っていた場合の記録
+        betrayerDic["playerCount"] = playerCount!
+        betrayerDic["buttonNumber"] = buttonNumber
+    }
+    
+    func beforeChoseAgentbutton(count: Int) -> Int {
+        // プレイヤーが青か赤かの判定
+        var playerCount = player.makePlayer(count: count)
+        // ボタンの作成
+        buttonProcessing.buttonPlayer(buttonNumberRight: normalAgentButton, buttonNumberLeft: glayAgentButton, plyaerColor: playerCount)
+        
+        return playerCount
     }
 
     
     @IBAction func oneButtonPressed(_ sender: Any) {
+        numberButtonAction(buttonNumber: 1, count: count)
     }
     @IBAction func twoButtonPressed(_ sender: Any) {
+        numberButtonAction(buttonNumber: 2, count: count)
     }
     @IBAction func threeButtonPressed(_ sender: Any) {
+        numberButtonAction(buttonNumber: 3, count: count)
     }
-    
     @IBAction func fourButtonPressed(_ sender: Any) {
+        numberButtonAction(buttonNumber: 4, count: count)
     }
     @IBAction func fiveButtonPressed(_ sender: Any) {
+        numberButtonAction(buttonNumber: 5, count: count)
     }
     @IBAction func sixButtonPressed(_ sender: Any) {
+        numberButtonAction(buttonNumber: 6, count: count)
     }
     @IBAction func sevenButtonPressed(_ sender: Any) {
+        numberButtonAction(buttonNumber: 7, count: count)
     }
-    
     @IBAction func eightButtonPressed(_ sender: Any) {
+        numberButtonAction(buttonNumber: 8, count: count)
     }
     @IBAction func nineButtonPressed(_ sender: Any) {
+        numberButtonAction(buttonNumber: 9, count: count)
     }
     @IBAction func tenButtonPressed(_ sender: Any) {
+        numberButtonAction(buttonNumber: 10, count: count)
     }
     @IBAction func elevenButtonPressed(_ sender: Any) {
+        numberButtonAction(buttonNumber: 11, count: count)
     }
     @IBAction func tewlveButtonPressed(_ sender: Any) {
+        numberButtonAction(buttonNumber: 12, count: count)
     }
-    
     @IBAction func thirteenButtonPressed(_ sender: Any) {
+        numberButtonAction(buttonNumber: 13, count: count)
     }
     @IBAction func fourteenButtonPressed(_ sender: Any) {
+        numberButtonAction(buttonNumber: 14, count: count)
     }
     @IBAction func fifteenButtonPressed(_ sender: Any) {
+        numberButtonAction(buttonNumber: 15, count: count)
     }
     @IBAction func sixteenButtonPressed(_ sender: Any) {
+        numberButtonAction(buttonNumber: 16, count: count)
     }
+    
     @IBAction func nextButtonPressed(_ sender: Any) {
+        var saveColorFunc = saveColor.saveColor(inputColor: betrayerDic["playerCount"]!, placeNumber: betrayerDic["buttonNumber"]!)
+        //裏切った場合の処理
+        switch betrayerFlag {
+        case true:
+            print("true")
+            var alertController = judgementBetrayer.popUp(saveColor:saveColorFunc)
+            // popupの発動
+            present(alertController, animated: true, completion: nil)
+        case false:
+            print("false")
+        default:
+            print("error")
+        }
+        
+        // 裏切りフラグのリセット
+        betrayerFlag = false
+        count += 1
     }
     @IBAction func normalAgentButtonPressed(_ sender: Any) {
+        
+        switch betrayerFlag {
+        case true:
+            print("true")
+            playerInfo = player.playerInfo(playerColor: playerCount!, selectAgent: 2)
+            
+        case false:
+            print("false")
+            playerInfo = player.playerInfo(playerColor: playerCount!, selectAgent: 1)
+        default:
+            print("error")
+        }
     }
     
     @IBAction func glaynormalAgentButtonPressed(_ sender: Any) {
+        betrayerFlag = true
+        
+        switch betrayerFlag {
+        case true:
+            print("true")
+            playerInfo = player.playerInfo(playerColor: playerCount!, selectAgent: 2)
+        case false:
+            print("false")
+            playerInfo = player.playerInfo(playerColor: playerCount!, selectAgent: 1)
+        default:
+            print("error")
+        }
+        
     }
     
    
