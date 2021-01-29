@@ -193,6 +193,13 @@
                                     <action selector="startButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="ibw-hI-Vwp"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xzl-pC-dFF">
+                                <rect key="frame" x="20" y="44" width="374" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -227,6 +234,7 @@
                         <outlet property="threeButton" destination="8ca-1T-wZ5" id="EWS-qM-Wsq"/>
                         <outlet property="twelveButton" destination="IW4-sk-knD" id="Nyz-YZ-oGF"/>
                         <outlet property="twoButton" destination="xiw-nM-dYf" id="AN6-6M-4TF"/>
+                        <outlet property="winLabel" destination="Xzl-pC-dFF" id="wU7-KF-Z1X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>

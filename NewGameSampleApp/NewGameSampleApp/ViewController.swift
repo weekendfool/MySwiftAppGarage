@@ -35,21 +35,31 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var normalAgentLabel: UILabel!
     @IBOutlet weak var glayAgentButton: UIButton!
     @IBOutlet weak var glayAgentLabel: UILabel!
+    @IBOutlet weak var winLabel: UILabel!
     
     @IBOutlet weak var startButton: UIButton!
     
     var count = 0 {
         didSet {
             playerCount = beforeChoseAgentbutton(count: count)
-            normalAgentLabel.text = String(playerInfo.0)
-            glayAgentLabel.text = String(playerInfo.1)
+            normalAgentLabel.text = String(playerInfo!.0)
+            glayAgentLabel.text = String(playerInfo!.1)
+            
+            switch count {
+            case 17:
+                finish()
+            default:
+                print("out")
+            }
         }
     }
     var fieldPoint: SCNVector3?
     var betrayerFlag: Bool?
     var playerCount: Int?
     var betrayerDic: [String: Int] = ["playerCount": 0, "buttonNumber": 0]
-    var playerInfo: (Int, Int)
+    var playerInfo: (Int, Int)?
+    var winLabelString: Int?
+    
     // 各インスタンスの作成
     var player = Player()
     var saveColor = SaveColor()
@@ -103,6 +113,23 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         buttonProcessing.buttonPlayer(buttonNumberRight: normalAgentButton, buttonNumberLeft: glayAgentButton, plyaerColor: playerCount)
         
         return playerCount
+    }
+    
+    func finish() {
+        // 裏切り者の処理
+//        judgementBetrayer.judgementBetrayer(beforeColorDic: <#T##[Int : Int]#>)
+        winLabelString = judmentWiner.judgmentWiner(afterColorDic: saveColor.colorDic)
+        switch winLabelString {
+        case 1:
+            winLabel.text = "\(winLabelString)Pの勝利"
+        case 2:
+            winLabel.text = "\(winLabelString)Pの勝利"
+        case 3:
+            winLabel.text = "引き分け"
+        default:
+            print("error")
+        }
+        
     }
 
     
