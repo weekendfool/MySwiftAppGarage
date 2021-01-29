@@ -63,6 +63,8 @@ struct Player {
                 print("error")
         }
         default:
+            normalAgwntNumber = 6
+            betrayerAgentNumber = 2
             print("error")
         }
         

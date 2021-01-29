@@ -78,7 +78,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         startButton.isEnabled = true
         startButton.isHidden = false
         betrayerFlag = false
-        playerInfo = player.playerInfo(playerColor: playerCount!, selectAgent: 0)
+        playerInfo = player.playerInfo(playerColor: 0, selectAgent: 0)
         
     }
    

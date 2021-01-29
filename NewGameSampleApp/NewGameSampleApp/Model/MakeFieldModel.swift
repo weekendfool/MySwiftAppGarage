@@ -27,7 +27,7 @@ struct MakeField {
         fieldPoint = cameraNode.convertPosition(infrontOfCamera, to: nil)
         
         // scnファイルからシーンを読み込む
-        let fieldScene = SCNScene(named: "art.scnassets/newField.scn")
+        let fieldScene = SCNScene(named: "art.scnassets/newField16.scn")
         // シーンからノードを検索する
         fieldNode = (fieldScene?.rootNode.childNode(withName: "field", recursively: false))!
         // 表示する座標を指定
