@@ -19,6 +19,7 @@ struct ButtonProcessing {
         switch plyaerColor {
         case 1:
             buttonNumber.backgroundColor = UIColor.red
+            
             buttonNumber.isEnabled = false
         case 2:
             buttonNumber.backgroundColor = UIColor.blue
@@ -27,7 +28,7 @@ struct ButtonProcessing {
             print("error Button")
         }
     
-        
+        buttonNumber.tintColor = UIColor.black
         
         
     }

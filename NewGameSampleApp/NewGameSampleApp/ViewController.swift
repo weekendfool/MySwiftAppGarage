@@ -10,7 +10,7 @@ import UIKit
 import SceneKit
 import ARKit
 
-class ViewController: UIViewController, ARSCNViewDelegate {
+class ViewController: UIViewController, ARSCNViewDelegate, UIPopoverControllerDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
     
@@ -41,6 +41,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     var count = 0 {
         didSet {
+            // popupの実行
+//            popUp.popuUp(view: view, targetViiew: self)
             playerCount = beforeChoseAgentbutton(count: count)
             normalAgentLabel.text = String(playerInfo!.0)
             glayAgentLabel.text = String(playerInfo!.1)
@@ -53,6 +55,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             }
         }
     }
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+            return .none
+        }
+    
     var fieldPoint: SCNVector3?
     var betrayerFlag: Bool?
     var playerCount: Int?
@@ -70,7 +77,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     let judmentWiner = JudmentWiner()
     let judgementBetrayer = JudgementBetrayer()
     let buttonProcessing = ButtonProcessing()
-    
+    let popUp = PopUP()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -79,6 +86,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         startButton.isHidden = false
         betrayerFlag = false
         playerInfo = player.playerInfo(playerColor: 0, selectAgent: 0)
+        
         
     }
    
@@ -123,9 +131,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         winLabelString = judmentWiner.judgmentWiner(afterColorDic: saveColor.colorDic)
         switch winLabelString {
         case 1:
-            winLabel.text = "\(winLabelString)Pの勝利"
+            winLabel.text = "\(winLabelString!)Pの勝利"
         case 2:
-            winLabel.text = "\(winLabelString)Pの勝利"
+            winLabel.text = "\(winLabelString!)Pの勝利"
         case 3:
             winLabel.text = "引き分け"
         default:

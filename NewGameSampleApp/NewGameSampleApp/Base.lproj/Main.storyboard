@@ -193,7 +193,6 @@
                                 <state key="normal" title="4"/>
                                 <connections>
                                     <action selector="fourButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="0Vr-d3-z6i"/>
-                                    <action selector="threeButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="W3j-mL-rJT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Asp-O0-Fls">
@@ -364,6 +363,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="132.58928571428572"/>
+        </scene>
+        <!--Content View Controller-->
+        <scene sceneID="mFV-VM-NiC">
+            <objects>
+                <viewController id="upa-DJ-c2a" customClass="ContentViewController" customModule="NewGameSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HBc-vu-ioe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="bwv-x6-uLf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vid-qr-zuQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="907" y="145"/>
         </scene>
     </scenes>
     <resources>
