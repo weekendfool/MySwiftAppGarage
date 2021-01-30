@@ -48,7 +48,7 @@ struct ButtonProcessing {
             buttonNumberLeft.setImage(agentBetrayerImage, for: .normal)
         case 2:
             // イメージの設定
-            agentNormalImage = UIImage(named: agentImage[4])
+            agentNormalImage = UIImage(named: agentImage[2])
             agentBetrayerImage = UIImage(named:  agentImage[3])
             
             //ボタンに画像を貼りつける

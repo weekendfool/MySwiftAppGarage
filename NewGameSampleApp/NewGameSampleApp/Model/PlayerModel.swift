@@ -43,9 +43,11 @@ struct Player {
             case 1:
                 // ノーマルエージェントを選択
                 normalAgwntNumber = playersDic["AgentBKN"]! - 1
+                betrayerAgentNumber = playersDic["AgentBKGY"]!
             case 2:
                 // 裏切り者を選択
                 betrayerAgentNumber = playersDic["AgentBKGY"]! - 1
+                normalAgwntNumber = playersDic["AgentBKN"]!
             default:
                 print("error")
             }
@@ -57,8 +59,10 @@ struct Player {
                 betrayerAgentNumber = playersDic["AgentWTGY"]!
             case 1:
                 normalAgwntNumber = playersDic["AgentWTN"]! - 1
+                betrayerAgentNumber = playersDic["AgentWTGY"]!
             case 2:
                 betrayerAgentNumber = playersDic["AgentWTGY"]! - 1
+                normalAgwntNumber = playersDic["AgentWTN"]!
             default:
                 print("error")
         }

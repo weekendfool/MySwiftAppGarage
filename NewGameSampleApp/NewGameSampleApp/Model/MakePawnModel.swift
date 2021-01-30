@@ -42,37 +42,37 @@ struct Pawn {
         // 選択された場所により生成する座標を変える
         switch fieldNumber {
         case 1:
-            newStagePointX = fieldPoint.x - 0.0098; newStagePointY = fieldPoint.y + 0.081; newStagePointZ = fieldPoint.z + 0.095
+            newStagePointX = fieldPoint.x - 0.13; newStagePointY = fieldPoint.y + 0.085; newStagePointZ = fieldPoint.z - 0.13
         case 2:
-            newStagePointX = fieldPoint.x - 0.0098; newStagePointY = fieldPoint.y + 0.081; newStagePointZ = fieldPoint.z + 0.095
+            newStagePointX = fieldPoint.x - 0.045; newStagePointY = fieldPoint.y + 0.085; newStagePointZ = fieldPoint.z - 0.13
         case 3:
-            newStagePointX = fieldPoint.x - 0.0098; newStagePointY = fieldPoint.y + 0.081; newStagePointZ = fieldPoint.z + 0.095
+            newStagePointX = fieldPoint.x + 0.045; newStagePointY = fieldPoint.y + 0.085; newStagePointZ = fieldPoint.z - 0.13
         case 4:
-            newStagePointX = fieldPoint.x - 0.0098; newStagePointY = fieldPoint.y + 0.081; newStagePointZ = fieldPoint.z + 0.095
+            newStagePointX = fieldPoint.x + 0.13; newStagePointY = fieldPoint.y + 0.085; newStagePointZ = fieldPoint.z - 0.13
         case 5:
-            newStagePointX = fieldPoint.x - 0.0098; newStagePointY = fieldPoint.y + 0.081; newStagePointZ = fieldPoint.z + 0.095
+            newStagePointX = fieldPoint.x - 0.13; newStagePointY = fieldPoint.y + 0.085; newStagePointZ = fieldPoint.z - 0.045
         case 6:
-            newStagePointX = fieldPoint.x - 0.0098; newStagePointY = fieldPoint.y + 0.081; newStagePointZ = fieldPoint.z + 0.095
+            newStagePointX = fieldPoint.x - 0.045; newStagePointY = fieldPoint.y + 0.085; newStagePointZ = fieldPoint.z - 0.045
         case 7:
-            newStagePointX = fieldPoint.x - 0.0098; newStagePointY = fieldPoint.y + 0.081; newStagePointZ = fieldPoint.z + 0.095
+            newStagePointX = fieldPoint.x + 0.045; newStagePointY = fieldPoint.y + 0.085; newStagePointZ = fieldPoint.z - 0.045
         case 8:
-            newStagePointX = fieldPoint.x - 0.0098; newStagePointY = fieldPoint.y + 0.081; newStagePointZ = fieldPoint.z + 0.095
+            newStagePointX = fieldPoint.x + 0.13; newStagePointY = fieldPoint.y + 0.085; newStagePointZ = fieldPoint.z - 0.045
         case 9:
-            newStagePointX = fieldPoint.x - 0.0098; newStagePointY = fieldPoint.y + 0.081; newStagePointZ = fieldPoint.z + 0.095
+            newStagePointX = fieldPoint.x - 0.13; newStagePointY = fieldPoint.y + 0.085; newStagePointZ = fieldPoint.z + 0.05
         case 10:
-            newStagePointX = fieldPoint.x - 0.0098; newStagePointY = fieldPoint.y + 0.081; newStagePointZ = fieldPoint.z + 0.095
+            newStagePointX = fieldPoint.x - 0.045; newStagePointY = fieldPoint.y + 0.085; newStagePointZ = fieldPoint.z + 0.05
         case 11:
-            newStagePointX = fieldPoint.x - 0.0098; newStagePointY = fieldPoint.y + 0.081; newStagePointZ = fieldPoint.z + 0.095
+            newStagePointX = fieldPoint.x + 0.045; newStagePointY = fieldPoint.y + 0.085; newStagePointZ = fieldPoint.z + 0.05
         case 12:
-            newStagePointX = fieldPoint.x - 0.0098; newStagePointY = fieldPoint.y + 0.081; newStagePointZ = fieldPoint.z + 0.095
+            newStagePointX = fieldPoint.x + 0.13; newStagePointY = fieldPoint.y + 0.085; newStagePointZ = fieldPoint.z + 0.05
         case 13:
-            newStagePointX = fieldPoint.x - 0.0098; newStagePointY = fieldPoint.y + 0.081; newStagePointZ = fieldPoint.z + 0.095
+            newStagePointX = fieldPoint.x - 0.13; newStagePointY = fieldPoint.y + 0.085; newStagePointZ = fieldPoint.z + 0.135
         case 14:
-            newStagePointX = fieldPoint.x - 0.0098; newStagePointY = fieldPoint.y + 0.081; newStagePointZ = fieldPoint.z + 0.095
+            newStagePointX = fieldPoint.x - 0.045; newStagePointY = fieldPoint.y + 0.085; newStagePointZ = fieldPoint.z + 0.135
         case 15:
-            newStagePointX = fieldPoint.x - 0.0098; newStagePointY = fieldPoint.y + 0.081; newStagePointZ = fieldPoint.z + 0.095
+            newStagePointX = fieldPoint.x + 0.045; newStagePointY = fieldPoint.y + 0.085; newStagePointZ = fieldPoint.z + 0.135
         case 16:
-            newStagePointX = fieldPoint.x - 0.0098; newStagePointY = fieldPoint.y + 0.081; newStagePointZ = fieldPoint.z + 0.095
+            newStagePointX = fieldPoint.x + 0.13; newStagePointY = fieldPoint.y + 0.085; newStagePointZ = fieldPoint.z + 0.135
         default:
             print("Make Pawn Error")
         }
@@ -80,6 +80,8 @@ struct Pawn {
         // 新しいオブジェクトの座標を規定
         let newFieldPoint = SCNVector3(x: newStagePointX!, y: newStagePointY!, z: newStagePointZ!)
         
+        //ノードの座標を指定
+        pawnNode!.position = newFieldPoint
         // ノードの大きさ変更
         pawnNode!.scale = SCNVector3(x: 0.02, y: 0.02, z: 0.02)
         // ノードの作成
