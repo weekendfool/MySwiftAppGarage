@@ -95,12 +95,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     // ボタンの動作を記述
-    func numberButtonAction(buttonNumber: Int, count: Int) {
+    func numberButtonAction(buttonNumber: Int, count: Int, uiButton: UIButton) {
         
         // ポーンの作成
         makePawn.makePawn(playerColor: playerCount!, fieldNumber: buttonNumber, fieldPoint: fieldPoint!, targetSceneView: sceneView)
         //　色の保存
         saveColor.saveColor(inputColor: playerCount!, placeNumber: buttonNumber)
+        // buttonの無効化
+        buttonProcessing.buttonProcessing(buttonNumber: uiButton, plyaerColor: playerCount!)
         // 裏切っていた場合の記録
         betrayerDic["playerCount"] = playerCount!
         betrayerDic["buttonNumber"] = buttonNumber
@@ -134,52 +136,52 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     
     @IBAction func oneButtonPressed(_ sender: Any) {
-        numberButtonAction(buttonNumber: 1, count: count)
+        numberButtonAction(buttonNumber: 1, count: count, uiButton: oneButton)
     }
     @IBAction func twoButtonPressed(_ sender: Any) {
-        numberButtonAction(buttonNumber: 2, count: count)
+        numberButtonAction(buttonNumber: 2, count: count, uiButton: twoButton)
     }
     @IBAction func threeButtonPressed(_ sender: Any) {
-        numberButtonAction(buttonNumber: 3, count: count)
+        numberButtonAction(buttonNumber: 3, count: count, uiButton: threeButton)
     }
     @IBAction func fourButtonPressed(_ sender: Any) {
-        numberButtonAction(buttonNumber: 4, count: count)
+        numberButtonAction(buttonNumber: 4, count: count, uiButton: fourButton)
     }
     @IBAction func fiveButtonPressed(_ sender: Any) {
-        numberButtonAction(buttonNumber: 5, count: count)
+        numberButtonAction(buttonNumber: 5, count: count, uiButton: fiveButton)
     }
     @IBAction func sixButtonPressed(_ sender: Any) {
-        numberButtonAction(buttonNumber: 6, count: count)
+        numberButtonAction(buttonNumber: 6, count: count, uiButton: sixButton)
     }
     @IBAction func sevenButtonPressed(_ sender: Any) {
-        numberButtonAction(buttonNumber: 7, count: count)
+        numberButtonAction(buttonNumber: 7, count: count, uiButton: sevenButton)
     }
     @IBAction func eightButtonPressed(_ sender: Any) {
-        numberButtonAction(buttonNumber: 8, count: count)
+        numberButtonAction(buttonNumber: 8, count: count, uiButton: eightButton)
     }
     @IBAction func nineButtonPressed(_ sender: Any) {
-        numberButtonAction(buttonNumber: 9, count: count)
+        numberButtonAction(buttonNumber: 9, count: count, uiButton: nineButton)
     }
     @IBAction func tenButtonPressed(_ sender: Any) {
-        numberButtonAction(buttonNumber: 10, count: count)
+        numberButtonAction(buttonNumber: 10, count: count, uiButton: tenButton)
     }
     @IBAction func elevenButtonPressed(_ sender: Any) {
-        numberButtonAction(buttonNumber: 11, count: count)
+        numberButtonAction(buttonNumber: 11, count: count, uiButton: elevenButton)
     }
     @IBAction func tewlveButtonPressed(_ sender: Any) {
-        numberButtonAction(buttonNumber: 12, count: count)
+        numberButtonAction(buttonNumber: 12, count: count, uiButton: twelveButton)
     }
     @IBAction func thirteenButtonPressed(_ sender: Any) {
-        numberButtonAction(buttonNumber: 13, count: count)
+        numberButtonAction(buttonNumber: 13, count: count, uiButton: thirteenButton)
     }
     @IBAction func fourteenButtonPressed(_ sender: Any) {
-        numberButtonAction(buttonNumber: 14, count: count)
+        numberButtonAction(buttonNumber: 14, count: count, uiButton: fourteenButton)
     }
     @IBAction func fifteenButtonPressed(_ sender: Any) {
-        numberButtonAction(buttonNumber: 15, count: count)
+        numberButtonAction(buttonNumber: 15, count: count, uiButton: fifteenButton)
     }
     @IBAction func sixteenButtonPressed(_ sender: Any) {
-        numberButtonAction(buttonNumber: 16, count: count)
+        numberButtonAction(buttonNumber: 16, count: count, uiButton: sixteenButton)
     }
     
     @IBAction func nextButtonPressed(_ sender: Any) {
