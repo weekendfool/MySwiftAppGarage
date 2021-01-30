@@ -47,6 +47,8 @@ class ViewController: UIViewController, ARSCNViewDelegate, UIPopoverControllerDe
             normalAgentLabel.text = String(playerInfo!.0)
             glayAgentLabel.text = String(playerInfo!.1)
             
+            print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
+            print(judgementBetrayer.betrayerDic)
             switch count {
             case 17:
                 finish()
@@ -66,6 +68,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, UIPopoverControllerDe
     var betrayerDic: [String: Int] = ["playerCount": 0, "buttonNumber": 0]
     var playerInfo: (Int, Int)?
     var winLabelString: Int?
+//    var buttonDic: [Int: UIButton] = [1: oneButton, 2: twoButton, 3: oneButton, 4: oneButton, 5: oneButton, 6: oneButton, 7: oneButton, 8: oneButton, 9: oneButton, 10: oneButton, 11: oneButton, 12: oneButton, 13: oneButton, 14: oneButton, 15: oneButton, 16: oneButton]
     
     // 各インスタンスの作成
     var player = Player()
@@ -75,7 +78,7 @@ class ViewController: UIViewController, ARSCNViewDelegate, UIPopoverControllerDe
     let makePawn = Pawn()
     let deleteAR = DeleteAR()
     let judmentWiner = JudmentWiner()
-    let judgementBetrayer = JudgementBetrayer()
+    var judgementBetrayer = JudgementBetrayer()
     let buttonProcessing = ButtonProcessing()
     let popUp = PopUP()
     
@@ -114,18 +117,130 @@ class ViewController: UIViewController, ARSCNViewDelegate, UIPopoverControllerDe
         // 裏切っていた場合の記録
         betrayerDic["playerCount"] = playerCount!
         betrayerDic["buttonNumber"] = buttonNumber
+        if betrayerFlag! {
+            judgementBetrayer.recordBetrayer(choosePlayerNumber: playerCount!, choosePlaceNumber: buttonNumber)
+        }
+        
+        
+    
     }
     
     func beforeChoseAgentbutton(count: Int) -> Int {
         // プレイヤーが青か赤かの判定
         var playerCount = player.makePlayer(count: count)
         // ボタンの作成
-        buttonProcessing.buttonPlayer(buttonNumberRight: normalAgentButton, buttonNumberLeft: glayAgentButton, plyaerColor: playerCount)
+        buttonProcessing.buttonPlayer(buttonNumberRight: normalAgentButton, buttonNumberLeft: glayAgentButton, plyaerColor: playerCount, playerInfo: playerInfo!)
         
         return playerCount
     }
     
     func finish() {
+        // 色変え
+        for num in 1...2 {
+            switch (judgementBetrayer.betrayerDic[num]) {
+            case 1:
+                if num == 1 {
+                    oneButton.backgroundColor = UIColor.blue
+                } else if num == 2 {
+                    oneButton.backgroundColor = UIColor.red
+                }
+            case 2:
+                if num == 1 {
+                    twoButton.backgroundColor = UIColor.blue
+                } else if num == 2 {
+                    twoButton.backgroundColor = UIColor.red
+                }
+            case 3:
+                if num == 1 {
+                    threeButton.backgroundColor = UIColor.blue
+                } else if num == 2 {
+                    threeButton.backgroundColor = UIColor.red
+                }
+            case 4:
+                if num == 1 {
+                    fourButton.backgroundColor = UIColor.blue
+                } else if num == 2 {
+                    fourButton.backgroundColor = UIColor.red
+                }
+            case 5:
+                if num == 1 {
+                    fiveButton.backgroundColor = UIColor.blue
+                } else if num == 2 {
+                    fiveButton.backgroundColor = UIColor.red
+                }
+            case 6:
+                if num == 1 {
+                    sixButton.backgroundColor = UIColor.blue
+                } else if num == 2 {
+                    sixButton.backgroundColor = UIColor.red
+                }
+            case 7:
+                if num == 1 {
+                    sevenButton.backgroundColor = UIColor.blue
+                } else if num == 2 {
+                    sevenButton.backgroundColor = UIColor.red
+                }
+            case 8:
+                if num == 1 {
+                    eightButton.backgroundColor = UIColor.blue
+                } else if num == 2 {
+                    eightButton.backgroundColor = UIColor.red
+                }
+            case 9:
+                if num == 1 {
+                    nineButton.backgroundColor = UIColor.blue
+                } else if num == 2 {
+                    nineButton.backgroundColor = UIColor.red
+                }
+            case 10:
+                if num == 1 {
+                    tenButton.backgroundColor = UIColor.blue
+                } else if num == 2 {
+                    tenButton.backgroundColor = UIColor.red
+                }
+            case 11:
+                if num == 1 {
+                    elevenButton.backgroundColor = UIColor.blue
+                } else if num == 2 {
+                    elevenButton.backgroundColor = UIColor.red
+                }
+            case 12:
+                if num == 1 {
+                    twelveButton.backgroundColor = UIColor.blue
+                } else if num == 2 {
+                    twelveButton.backgroundColor = UIColor.red
+                }
+            case 13:
+                if num == 1 {
+                    thirteenButton.backgroundColor = UIColor.blue
+                } else if num == 2 {
+                    thirteenButton.backgroundColor = UIColor.red
+                }
+            case 14:
+                if num == 1 {
+                    fourteenButton.backgroundColor = UIColor.blue
+                } else if num == 2 {
+                    fourteenButton.backgroundColor = UIColor.red
+                }
+            case 15:
+                if num == 1 {
+                    fifteenButton.backgroundColor = UIColor.blue
+                } else if num == 2 {
+                    fifteenButton.backgroundColor = UIColor.red
+                }
+            case 16:
+                if num == 1 {
+                    sixteenButton.backgroundColor = UIColor.blue
+                } else if num == 2 {
+                    sixteenButton.backgroundColor = UIColor.red
+                }
+                
+            default:
+                print("judge error")
+        }
+        
+        }
+        
         // 裏切り者の処理
 //        judgementBetrayer.judgementBetrayer(beforeColorDic: <#T##[Int : Int]#>)
         winLabelString = judmentWiner.judgmentWiner(afterColorDic: saveColor.colorDic)

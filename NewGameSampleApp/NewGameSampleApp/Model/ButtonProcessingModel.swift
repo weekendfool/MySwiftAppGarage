@@ -33,7 +33,7 @@ struct ButtonProcessing {
         
     }
     
-    func buttonPlayer(buttonNumberRight: UIButton, buttonNumberLeft: UIButton, plyaerColor: Int) {
+    func buttonPlayer(buttonNumberRight: UIButton, buttonNumberLeft: UIButton, plyaerColor: Int, playerInfo: (Int, Int)) {
         var agentImage: [String] = ["AgentBKGY", "AgentBKN", "AgentWTGY", "AgentWTN"]
         var agentNormalImage: UIImage?
         var agentBetrayerImage: UIImage?
@@ -47,6 +47,13 @@ struct ButtonProcessing {
             //ボタンに画像を貼りつける
             buttonNumberRight.setImage(agentNormalImage, for: .normal)
             buttonNumberLeft.setImage(agentBetrayerImage, for: .normal)
+            
+//            // 残機を使い切った場合押せなくする
+//            if playerInfo.0 == 0 {
+//                buttonNumberRight.isEnabled = false
+//            } else if playerInfo.1 == 0 {
+//                buttonNumberLeft.isEnabled = false
+//            }
         case 2:
             // イメージの設定
             agentNormalImage = UIImage(named: agentImage[2])
