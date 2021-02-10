@@ -127,7 +127,8 @@ struct OperateDatabase {
     }
     
     // データベースのリアルタイム更新の監視終了処理
-    func stopRealTimeMonitor(targetCorection: String) {
+    func stopRealTimeMonitor() {
+        listener?.remove()
         
     }
     // データベースの削除処理
