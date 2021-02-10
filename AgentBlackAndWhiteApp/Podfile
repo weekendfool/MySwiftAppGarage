@@ -6,7 +6,9 @@ target 'AgentBlackAndWhiteApp' do
   use_frameworks!
 
   # Pods for AgentBlackAndWhiteApp
-
+pod 'Firebase/Database'
+pod 'Firebase/Core'
+pod 'Firebase/Firestore'
   target 'AgentBlackAndWhiteAppTests' do
     inherit! :search_paths
     # Pods for testing
@@ -15,6 +17,5 @@ target 'AgentBlackAndWhiteApp' do
   target 'AgentBlackAndWhiteAppUITests' do
     # Pods for testing
   end
-pod 'Firebase/Database'
-pod 'Firebase/Auth'
+
 end
