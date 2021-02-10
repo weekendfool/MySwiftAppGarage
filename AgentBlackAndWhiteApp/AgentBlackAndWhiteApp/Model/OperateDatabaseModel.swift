@@ -132,7 +132,31 @@ struct OperateDatabase {
         
     }
     // データベースの削除処理
-    func deleteDatabaseData(targetCorection: String) {
-        
+    // ユーザーの退会時
+    // ルームの削除時に使用
+    func deleteDatabaseDocumentData(targetCorection: String, targetDocument: String) {
+        database.collection(targetCorection).document(targetDocument).delete() { err in
+            if let err = err {
+                print("-----------------------------------------")
+                print("Error At deleteDatabaseDocumentData(): \(err)")
+            } else {
+                print("==========================================")
+                print("document successfully deleted")
+            }
+        }
+    }
+    
+    // ユーザー内のフラグやroomID削除時に使用
+    func deleteFieldDocumentData(targetCorection: String, targetDocument: String, targetField: String) {
+        database.collection(targetCorection).document(targetDocument).updateData([targetField: FieldValue.delete(),
+        ]) { err in
+            if let err = err {
+                print("-----------------------------------------")
+                print("Error At deleteFieldDocumentData(): \(err)")
+            } else {
+                print("==========================================")
+                print("document successfully updateDated")
+            }
+        }
     }
 }
