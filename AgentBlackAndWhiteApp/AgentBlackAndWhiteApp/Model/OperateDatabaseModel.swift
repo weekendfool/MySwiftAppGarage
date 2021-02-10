@@ -58,11 +58,11 @@ struct OperateDatabase {
     }
     
     // データベースの検索処理
-    mutating func searchDatabase(targetCorection: String, targetFieldName: String, dicOfTarget: [String: Any]) -> String {
+    mutating func searchDatabase(targetCorection: String, targetFieldName: String, dicOfTarget: [String: Any]) -> Any {
         // 検索したい条件を設定
         var docRef = database.collection(targetCorection).whereField(targetFieldName, isEqualTo: dicOfTarget[targetFieldName])
         // データ返却用の変数
-        var ansewer: Any?
+        var getData: Any?
         // 実際に検索する
         docRef.getDocuments { [self] (querySnapshot, err) in
             if let err = err {
@@ -73,17 +73,61 @@ struct OperateDatabase {
                 print("document successfully searched")
                 for document in querySnapshot!.documents {
                     // 取得したデータを返却
-                    ansewer = document.data()[targetFieldName]
+                    getData = document.data()[targetFieldName]
                                         
                 }
             }
         }
-        return ansewer! as! String
+        return getData!
 
     }
     
-    // データベースのリアルタイム更新の監視処理
-    func realTimeMonitor(targetCorection: String) {
+    // データベースのリアルタイム更新の監視開始処理
+    mutating func startRealTimeMonitor(targetCorectionIsUsers: String, targetCorectionIsRooms: String, targetFieldName: String, numberOfTargets: Int) -> Any {
+        // データ返却用の変数
+        var getData: Any
+        // どのfieldを監視するかの場合わけ
+        switch numberOfTargets {
+        case 1:
+            // ユーザーのみ監視
+            getData = getDatas(targetCorection: targetCorectionIsUsers, targetFieldName: targetCorectionIsRooms)
+        case 2:
+            //　ルームのみ監視
+            getData = getDatas(targetCorection: targetCorectionIsRooms, targetFieldName: targetCorectionIsRooms)
+        case 3:
+            // ユーザー、ルーム両方監視
+            getData = getDatas(targetCorection: targetCorectionIsUsers, targetFieldName: targetCorectionIsRooms)
+            getData = getDatas(targetCorection: targetCorectionIsRooms, targetFieldName: targetCorectionIsRooms)
+            
+        default:
+            return "Error at startRealTimeMonitor"
+        }
+        return getData
+    }
+    
+    // リアルタイム更新でデータを取得する関数
+    mutating func getDatas(targetCorection: String, targetFieldName: String) -> Any {
+        // データ返却用の変数
+        var getData: Any?
+        listener = database.collection(targetCorection).addSnapshotListener {
+            documentSnapshot, err in
+            if let err = err {
+                print("-----------------------------------------")
+                print("Error At startRealTimeMonitor(),numberOfTargets Is \(targetCorection): \(err)")
+            } else {
+                // 更新されたデータを取得
+                if let documentSnapshots = documentSnapshot?.documents {
+                    for document in documentSnapshots {
+                        getData = document.data()[targetFieldName]
+                    }
+                }
+            }
+        }
+        return getData
+    }
+    
+    // データベースのリアルタイム更新の監視終了処理
+    func stopRealTimeMonitor(targetCorection: String) {
         
     }
     // データベースの削除処理
