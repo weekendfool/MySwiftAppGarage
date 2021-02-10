@@ -58,8 +58,28 @@ struct OperateDatabase {
     }
     
     // データベースの検索処理
-    func searchDatabase(targetCorection: String, argetFieldName: String, dicOfTarget: [String: Any]) -> String {
-        
+    mutating func searchDatabase(targetCorection: String, targetFieldName: String, dicOfTarget: [String: Any]) -> String {
+        // 検索したい条件を設定
+        var docRef = database.collection(targetCorection).whereField(targetFieldName, isEqualTo: dicOfTarget[targetFieldName])
+        // データ返却用の変数
+        var ansewer: Any?
+        // 実際に検索する
+        docRef.getDocuments { [self] (querySnapshot, err) in
+            if let err = err {
+                print("-----------------------------------------")
+                print("Error At searchDatabase(): \(err)")
+            } else {
+                print("==========================================")
+                print("document successfully searched")
+                for document in querySnapshot!.documents {
+                    // 取得したデータを返却
+                    ansewer = document.data()[targetFieldName]
+                                        
+                }
+            }
+        }
+        return ansewer! as! String
+
     }
     
     // データベースのリアルタイム更新の監視処理
