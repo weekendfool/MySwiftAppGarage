@@ -29,19 +29,18 @@ struct OperateDatabase {
                 // エラーが発生した場合の目印:print("-----------------------------------------")
                 print("-----------------------------------------")
                 print("Error At makeDatabase(): \(err)")
-            } else {
-            // 成功した場合
-                // 成功した場合の目印:print("==========================================")
-                print("==========================================")
-                print("document added with ID: \(ref!.documentID)")
             }
         }
+        // 成功した場合
+            // 成功した場合の目印:print("==========================================")
+            print("==========================================")
+            print("document added with ID: \(ref!.documentID)")
         // ユーザーのユニークIDを発行してもらう
         return ref!.documentID
         
     }
     // データベースへの書き込み処理
-    mutating func updateDatabase(targetCollection: String, inputData: [String: Any], userID: String, TargetFieldName: String, dicOfTarget: [String: Any]) {
+    mutating func updateDatabase(targetCollection: String, userID: String, TargetFieldName: String, dicOfTarget: [String: Any]) {
         // 格納先を指定
         ref = database.collection(targetCollection).document(userID)
         ref!.updateData([TargetFieldName: dicOfTarget[TargetFieldName]]) { (err) in
